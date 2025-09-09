@@ -164,7 +164,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('/Bycodeit-portfolio/images/background/background.png');
+  background-image: url('../images/background/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -178,7 +178,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/Bycodeit-portfolio/images/background/background.png');
+  background-image: url('../images/background/background.png');
   background-size: cover;
   background-position: center;
   filter: blur(3px);
@@ -453,7 +453,6 @@ b, strong {
 
 
 /* PORTFOLIO */
-
 .portfolio-thumb {
   position: relative;
   overflow: hidden;
@@ -586,8 +585,8 @@ b, strong {
   transition: all 0.3s ease;
 } */
 
-/* SECTION */
 
+/* SECTION */
 .section-padding {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -637,8 +636,8 @@ b, strong {
   box-shadow: none;
 }
 
-/* CONTACT */
 
+/* CONTACT */
 .contact-section {
   background-color: #f8f9fa;
   padding: 3rem 0;
@@ -681,21 +680,12 @@ b, strong {
   outline: none;
 }
 
-.map-container {
-  width: 100%;
-  height: 420px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  .map-container {
-    height: 320px;
-  }
+.card-border {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 59, 0, 0.2); /* subtle green border glow */
 }
 
 /* SITE FOOTER */
-
 .site-footer-modern {
   background-color: #004000;
   color: #ffffff;
@@ -759,11 +749,6 @@ b, strong {
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.footer-social a:hover {
-  color: #ffffff;
-  transform: scale(1.1);
-}
-
 .footer-divider {
   border-color: rgba(255, 255, 255, 0.1);
   margin: 2rem 0;
@@ -782,23 +767,12 @@ b, strong {
   vertical-align: middle;
 }
 
-.footer-legal li {
-  list-style: none;
-  margin-bottom: 0.5rem;
-}
-
-.footer-legal a {
-  color: #cccccc;
-  text-decoration: none;
-  font-size: 0.85rem;
-}
-
-.footer-legal a:hover {
-  color: #ffffff;
+.footer-social a:hover i {
+  color: #25D366; /* WhatsApp green */
 }
 
 .footer-location {
-  font-size: 0.85rem;
+  font-size: 0.90rem;
   color: #dddddd;
 }
 
