@@ -249,7 +249,7 @@ a {
   right: 0;
   left: 0;
   padding-top: 15px;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
 }
 
 .navbar-brand {
@@ -259,8 +259,9 @@ a {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-right: 20px;
-  padding-left: 20px;
+  /* padding-right: 10px; */
+  /* padding-left: 20px; */
+  margin-right: 20px;
 }
 
 .navbar-nav .nav-link::after {
@@ -545,22 +546,22 @@ a {
 }
 
 
-/* #stats {
+#stats {
   background-color: var(--dark-green-color);
-} */
+}
 
-/* .counter {
+.counter {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   transition: all 0.3s ease;
-} */
+}
 
 
 /* CONTACT */
 .contact-section {
   background-color: #f8f9fa;
-  padding: 3rem 0;
+  padding: 10rem 0;
 }
 
 .text-dark-green {

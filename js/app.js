@@ -95,36 +95,36 @@
 // }
 
 
-    // const counters = document.querySelectorAll('.counter');
+//     const counters = document.querySelectorAll('.counter');
 
-    // const animateCounters = () => {
-    //         counters.forEach(counter => {
-    //             const update = () => {
-    //                 const target = +counter.getAttribute('data-target');
-    //                 const count = +counter.innerText;
-    //                 const increment = target / 100;
+//     const animateCounters = () => {
+//             counters.forEach(counter => {
+//                 const update = () => {
+//                     const target = +counter.getAttribute('data-target');
+//                     const count = +counter.innerText;
+//                     const increment = target / 100;
 
-    //                 if (count < target) {
-    //                     counter.innerText = Math.ceil(count + increment);
-    //                     setTimeout(update, 30);
-    //                 } else {
-    //                     counter.innerText = target;
-    //                 }
-    //             };
-    //             update();
-    //         });
-    // };
+//                     if (count < target) {
+//                         counter.innerText = Math.ceil(count + increment);
+//                         setTimeout(update, 30);
+//                     } else {
+//                         counter.innerText = target;
+//                     }
+//                 };
+//                 update();
+//             });
+//     };
 
-    //     // Trigger animation when section is in view
-    //     const statsSection = document.getElementById('stats');
-    //     let statsStarted = false;
+//         // Trigger animation when section is in view
+//         const statsSection = document.getElementById('stats');
+//         let statsStarted = false;
 
-    // window.addEventListener('scroll', () => {
-    //     const sectionTop = statsSection.getBoundingClientRect().top;
-    //     if (sectionTop < window.innerHeight && !statsStarted) {
-    //         statsStarted = true;
-    //     animateCounters();
-    //     }
+//     window.addEventListener('scroll', () => {
+//         const sectionTop = statsSection.getBoundingClientRect().top;
+//         if (sectionTop < window.innerHeight && !statsStarted) {
+//             statsStarted = true;
+//         animateCounters();
+//         }
 // });
     
 
