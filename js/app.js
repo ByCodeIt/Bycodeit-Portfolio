@@ -136,9 +136,13 @@
     //         preloader.style.display = 'none';
     //     }, 500);
 // });
+
+// document.getElementById("darkToggle").addEventListener("click", () => {
+//     document.body.classList.toggle("dark-mode");
+// });
     
 
-
+    // SMOOTH SCROLL
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
@@ -148,11 +152,6 @@
             }
         });
     });
-
-
-    // document.getElementById("darkToggle").addEventListener("click", () => {
-    //     document.body.classList.toggle("dark-mode");
-// });
     
 
     // BACK TO TOP
@@ -163,5 +162,4 @@
     backToTop.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
-
 

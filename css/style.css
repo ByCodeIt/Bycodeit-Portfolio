@@ -28,6 +28,10 @@
   --font-weight-black:          900;
 }
 
+.text-dark-green:hover {
+  color: #0f766e;
+}
+
 /* * {
   outline: 1px solid red;
 } */
@@ -561,7 +565,7 @@ a {
 /* CONTACT */
 .contact-section {
   background-color: #f8f9fa;
-  padding: 10rem 0;
+  padding: 6rem 0;
 }
 
 .text-dark-green {
@@ -609,21 +613,22 @@ a {
 /* SITE FOOTER */
 .site-footer-modern {
   background-color: #004000;
-  color: #ffffff;
+  color: #f8f9fa;
   padding: 3rem 0 2rem;
 }
 
 .footer-brand {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #f8f9fa;
   margin-bottom: 1rem;
 }
 
 .footer-description {
   font-size: 1rem;
+  font-weight: var(--font-weight-light);
   line-height: 1.6;
-  color: #cccccc;
+  color: #f8f9fa;
 }
 
 .footer-heading {
@@ -645,13 +650,13 @@ a {
 }
 
 .footer-links a {
-  color: #cccccc;
+  color: #f8f9fa;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+  color: #25D366;
 }
 
 .footer-social {
@@ -664,7 +669,7 @@ a {
 }
 
 .footer-social a {
-  color: #cccccc;
+  color: #f8f9fa;
   font-size: 1.4rem;
   margin-right: 1rem;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -676,8 +681,8 @@ a {
 }
 
 .footer-copy {
-  font-size: 1rem;
-  color: #aaaaaa;
+  font-size: 0.90rem;
+  color: #f8f9fa;
   margin: 0;
 }
 
@@ -694,7 +699,18 @@ a {
 
 .footer-location {
   font-size: 0.90rem;
-  color: #dddddd;
+  font-weight: var(--font-weight-bolder);
+  color: #f8f9fa;
+}
+
+.footer-email a {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bolder);
+  color: #f8f9fa; /* Light text for dark footer */
+}
+
+.footer-email a:hover {
+  color: #0f766e; /* Teal accent on hover */
 }
 
 /* RESPONSIVE STYLES */
