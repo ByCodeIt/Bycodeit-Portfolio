@@ -1,331 +1,535 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a3d62" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1e272e" media="(prefers-color-scheme: dark)" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="language" content="en" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="author" content="ByCodeIt Solutions" />
+    <meta name="generator" content="ByCodeIt Solutions - https://bycodeit.dev - 2025" />
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="ByCODEIT builds modern, mobile-optimized websites for businesses in Nigeria and International Countries. Let's bring your idea to life.">
-    <meta name="author" content="ByCODEIT - https://bycodeit.dev - 2025">
-    <meta name="generator" content="ByCODEIT - https://bycodeit.dev - 2025">
-    <meta name="keywords" content="business"> <!-- e.g. travel, business, fashion, studio -->
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <meta name="yandex" content="index, follow">
-    <meta name="msnbot" content="index, follow">
-    <meta name="revisit-after" content="7 days">
-    <meta name="language" content="English">
-    <meta name="theme-color" content="#0a3d62">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="ByCODEIT Solutions">
-    <meta name="format-detection" content="telephone=no"> <!-- Prevents iOS from auto-linking phone numbers -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta http-equiv="cleartype" content="on">
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <link rel="canonical" href="https://bycodeit.dev">
-    <link rel="alternate" href="https://bycodeit.dev" hreflang="en-us">
-    <link rel="alternate" href="https://bycodeit.dev" hreflang="en">
-    <link rel="author" href="https://bycodeit.dev">
-    <link rel="publisher" href="https://bycodeit.dev">
-    <meta property="og:ByCODEIT Solutions" content="ByCODEIT Solutions">
+    <!-- SEO Meta Tags -->
+    <title>ByCodeIt Solutions | Your Vision Our Code</title>
+    <meta name="description" content="ByCodeIt Solutions builds modern, responsive, and SEO-optimized websites for businesses and startups in Nigeria and beyond." />
+    <meta name="keywords" content="frontend developer, web developer, website design, responsive websites, UI UX design, React developer, Tailwind CSS, ByCodeIt Solutions, Nigeria web developer" />
 
-    <title>ByCODEIT Solutions</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="ByCodeIt Solutions | We Code Your Vision" />
+    <meta property="og:description" content="ByCodeIt Solutions builds custom, mobile-optimized, and SEO-ready websites for businesses in Nigeria and internationally." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bycodeit.dev" />
+    <meta property="og:image" content="https://bycodeit.dev/assets/og-image.jpg" />
+    <meta property="og:site_name" content="ByCodeIt Solutions" />
 
-    <!-- Favicon icon -->
-    <link rel="icon" href="images/ico/ByCODEIT-ico.png" type="image/png">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ByCodeIt Solutions | We Code Your Vision" />
+    <meta name="twitter:description" content="Custom websites, UI/UX design, and modern frontend development for businesses that want to stand out." />
+    <meta name="twitter:image" content="https://bycodeit.dev/assets/og-image.jpg" />
+    <meta name="twitter:site" content="@bycodeit" />
+    <meta name="twitter:creator" content="@bycodeit" />
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&
-                family=Montserrat:ital,wght@0,100..900;1,100..900&
-                family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" 
-                rel="stylesheet">
+    <!-- Favicons and Apple Touch -->
+    <link rel="icon" href="./assets/ico-img/bycodeit-ico.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="./assets/ico-img/bycodeit-ico.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="ByCodeIt Solutions" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- CSS FILES  1 -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/magnific-popup.css" rel="stylesheet">
-    <link href="css/aos.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Canonical & Alternate Links -->
+    <link rel="canonical" href="https://bycodeit.dev" />
+    <link rel="alternate" href="https://bycodeit.dev" hreflang="en" />
+
+    <!-- Performance Enhancements -->
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="dns-prefetch" href="//bycodeit.dev" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta http-equiv="cleartype" content="on" />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./src/custom.css" />
+
+    <!-- Logo image preload -->
+    <link rel="preload" as="image" href="./assets/logo-img/ByCodeIt.png">
 
 </head>
 
+
+
 <body>
 
-    <!-- Preloader Section -->
-    <!-- Dark mode toggle -->
+    <main id="main">
 
-    <!-- Back to top -->
-    <button id="backToTop">↑</button>
+        <!-- Skip to Content Link (Accessibility) -->
+        <a href="#main" class="sr-only focus:not-sr-only absolute top-2 left-2 bg-blue-600 text-white px-4 py-2 rounded">
+            Skip to content
+        </a>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <!-- <div class="overlay"></div> --> <!-- Optional overlay for darkening the background -->
-            
-            <div class="hero-content container">
-                <h1 class="hero-title text-white" data-aos="fade-up" data-aos-delay="400">
-                    Elevate Your Brand with <span class="highlight">Front-End & Web Design</span> Services.
-                </h1>
-
-                <p class="hero-subtitle text-white" data-aos="fade-up" data-aos-delay="600">
-                    ByCodeIt delivers sleek, responsive, and user-focused digital experiences.
-                </p>
-
-                <a href="#connect" class="fancy-link" data-aos="fade-up" data-aos-delay="800">
-                    Let’s Connect →
-                </a>
-            </div>
-        </section>
-        <!-- End of Hero Section -->
-
-    
         <!-- Navigation Section -->
-        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-            <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <img src="images/logo/ByCODEIT logo1.svg" alt="ByCodeIt Logo" class="navbar-logo">
-                </a>
+        <nav id="navbar" aria-label="Main navigation"
+            class="fixed top-0 left-0 w-full bg-[#0a0f2c]/90 backdrop-blur-md shadow-md z-50 transition duration-300">
+            <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-22 flex items-center justify-between h-25 relative">
         
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <!-- Logo -->
+                <a href="index.html"
+                    class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
+                    <img src="./assets/logo-img/ByCodeIt.png" alt="ByCodeIt Logo" class="h-6 w-auto lg:h-8" />
+                    <h2 class="text-1xl font-bold text-white tracking-tight font-[var(--font-display)] md:text-2xl lg:text-3xl">
+                        ByCodeIt <span class="text-blue-400">Solutions</span>
+                    </h2>
+                </a>
+
+
+                <!-- Mobile Toggle Button -->
+                <button id="menuToggle" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+                    aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" onclick="openMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
                 </button>
         
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#hero">Home</a>
-                        </li>
+                <!-- Desktop Navigation Links + CTA -->
+                <div class="hidden md:flex items-center space-x-10 text-sm font-medium text-white font-[var(--font-display)]">
         
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">The Brand</a>
-                        </li>
+                    <!-- Navigation Links -->
+                    <div id="navbarNav" class="flex items-center space-x-8">
+                        <a href="#hero"
+                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
+                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                            Home
+                        </a>
+                        <a href="#about"
+                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
+                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                            The Brand
+                        </a>
+                        <a href="#services"
+                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
+                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                            Services
+                        </a>
+                        <a href="#portfolio"
+                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
+                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                            Portfolio
+                        </a>
+                        <a href="#connect"
+                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
+                                        hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                            Connect
+                        </a>
+                    </div>
+        
+                    <!-- CTA Button -->
+                    <a href="#connect"
+                        class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium
+                        hover:from-blue-500 hover:to-indigo-500 transition shadow-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        Hire Me
+                    </a>
+                </div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
         
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link" href="#connect">Connect</a>
-                        </li>
-                    </ul>
+                <!-- Scroll Progress Bar integrated inside Navbar -->
+                <div id="progressBar"
+                    class="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-blue-500 to-indigo-500 w-0 transition-all duration-200 ease-out">
                 </div>
             </div>
         </nav>
+
+
+        <!-- Backdrop Overlay -->
+        <div id="menuBackdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden md:hidden" onclick="closeMenu()">
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-0 w-64 h-full bg-[#0a0f2c] z-50 text-white font-[var(--font-display)] shadow-lg transform translate-x-full transition-transform duration-300 md:hidden"
+            role="dialog" aria-modal="true" aria-label="Mobile menu">
+        
+            <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+                <h3 class="text-lg font-semibold">Menu</h3>
+                <button aria-label="Close menu" onclick="closeMenu()"
+                    class="focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        
+            <ul class="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
+                <li><a href="#hero" onclick="closeMenu()"
+                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Home</a>
+                </li>
+                <li><a href="#about" onclick="closeMenu()"
+                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">The
+                        Brand</a></li>
+                <li><a href="#services" onclick="closeMenu()"
+                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Services</a>
+                </li>
+                <li><a href="#portfolio" onclick="closeMenu()"
+                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Portfolio</a>
+                </li>
+                <li><a href="#connect" onclick="closeMenu()"
+                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Connect</a>
+                </li>
+            </ul>
+        </div>
         <!-- End of Navigation Section -->
 
 
+        <!-- New Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center px-6 py-24 font-[var(--font-display)]
+                                    bg-cover bg-center bg-no-repeat text-white"
+            style="background-image: url('./assets/background-img/background5.webp');">
+        
+            <!-- Overlay for readability -->
+            <div class="absolute inset-0 bg-black/60"></div>
+        
+            <!-- Content -->
+            <div class="relative z-10 max-w-4xl text-center" data-aos="fade-up" data-aos-delay="400">
+        
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
+                    Elevate Your Brand with
+                    <span
+                        class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent drop-shadow-md font-[var(--font-accent)]">
+                        Front-End & Web Design
+                    </span>
+                    Services.
+                </h1>
+        
+                <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-[var(--font-body)]">
+                    ByCodeIt delivers sleek, responsive, and user-focused digital experiences.
+                </p>
+        
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                
+                    <!-- Primary CTA -->
+                    <a href="#connect" class="inline-flex items-center gap-2 px-7 py-3 rounded-lg 
+                            bg-white text-[#0a0f2c] font-semibold shadow-md
+                            transition-all duration-300 ease-in-out
+                            hover:shadow-[0_0_20px_4px_rgba(59,130,246,0.5)]
+                            hover:ring-2 hover:ring-blue-400/70">
+                
+                        <!-- Premium Icon -->
+                        <svg class="w-5 h-5 text-[#0a0f2c]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7-7 7M21 12H3" />
+                        </svg>
+                
+                        <span>Let’s Connect</span>
+                    </a>
+                
+                    <!-- Secondary CTA -->
+                    <a href="#portfolio" class="inline-flex items-center gap-2 px-7 py-3 rounded-lg 
+                            bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold 
+                            shadow-md transition-all duration-300 ease-in-out
+                            hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.5)]
+                            hover:ring-2 hover:ring-indigo-400/70">
+                
+                        <!-- Premium Icon -->
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 7h18M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7M16 3H8v4h8V3z" />
+                        </svg>
+                
+                        <span>View Portfolio</span>
+                    </a>
+                </div>
+        
+            <!-- Scroll Indicator -->
+            <!-- <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+                <a href="#about" class="animate-bounce text-white/70 hover:text-white transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+            </div> -->
+        </section>
+        <!-- End of Hero Section -->
+
+
         <!-- About Section -->
-        <section class="section-padding pb-0" id="about">
-            <div class="container mb-5">
-                <div class="row">
-                    <!-- Heading -->
-                    <div class="col-12">
-                        <h2 class="mb-2 text-center text-lg-start portfolio-title" data-aos="fade-up">Your Vision, Our Code.</h2>
-                    </div>
+        <section id="about"
+            class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
+        
+            <div class="max-w-7xl mx-auto">
+        
+                <!-- Heading -->
+                <h2 class="text-4xl font-extrabold text-center md:text-left mb-12 font-[var(--font-display)] tracking-tight"
+                    data-aos="fade-up">
+                    Your Vision, Our Code.
+                </h2>
+        
+                <!-- Content Grid -->
+                <div class="grid md:grid-cols-2 gap-12 mb-16">
         
                     <!-- Left Column -->
-                    <div class="col-lg-6 col-12 mt-3 mb-4 mb-lg-5">
-                        <p class="me-lg-4 fw-semibold" data-aos="fade-up" data-aos-delay="300">
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-lg leading-relaxed font-[var(--font-body)]">
                             <strong>ByCodeIt Solutions</strong> is a tech startup dedicated to transforming ideas into sleek,
-                            high‑performing digital experiences.
-                            We specialize in <strong>custom‑built websites</strong>, <strong>responsive front‑end
-                                solutions</strong>,
-                            and <strong>modern React applications</strong> that help businesses stand out in today’s competitive
-                            digital world.
-                            <br><br>
-                            Our mission is simple: <em>to code your vision into reality</em> — crafting websites that are not only visually
-                            striking, but also intuitive, fast, and built for growth.
+                            high‑performing digital experiences. We specialize in
+                            <span class="text-blue-300">custom‑built websites</span>,
+                            <span class="text-blue-300">responsive front‑end solutions</span>, and
+                            <span class="text-blue-300">modern React applications</span> that help businesses stand out.
+                        </p>
+                        <p class="mt-6 text-lg leading-relaxed font-[var(--font-body)]">
+                            Our mission is simple: <em>to code your vision into reality</em> — crafting websites that are not
+                            only
+                            visually striking, but also intuitive, fast, and built for growth.
                         </p>
                     </div>
         
                     <!-- Right Column -->
-                    <div class="col-lg-6 col-12 mt-0 mt-lg-3 mb-4 mb-lg-5 about-right about-divider">
-                        <p data-aos="fade-up fw-semibold" data-aos-delay="500">
-                            Whether serving small business owners, growing startups, or established brands,
-                            every project is tailored to unique goals and audiences.
-                            <br><br>
-                            Guided by values of <strong>Excellence</strong>, <strong>Innovation</strong>,
-                            <strong>Collaboration</strong>, and <strong>Integrity</strong>,
-                            ByCodeIt Solutions combines clean design, seamless user experiences, and optimized performance
-                            to build a powerful online presence clients can trust.
+                    <div data-aos="fade-up" data-aos-delay="500">
+                        <p class="text-lg leading-relaxed font-[var(--font-body)]">
+                            Whether serving small business owners, growing startups, or established brands, every project is
+                            tailored to
+                            unique goals and audiences.
                         </p>
-
-                        <div class="mt-4 text-start" data-aos="fade-up" data-aos-delay="600">
-                            <p class="fw-bold text-dark-green">Want to collaborate or ask a question?</p>
-                            <a href="mailto:contact@bycodeit.dev" class="d-inline-flex align-items-center text-decoration-none text-dark-green fw-bold">
-                                <i class="bi bi-envelope-fill me-2"></i> contact@bycodeit.dev
+                        <p class="mt-6 text-lg leading-relaxed font-[var(--font-body)]">
+                            Guided by values of <span class="text-blue-300">Excellence</span>,
+                            <span class="text-blue-300">Innovation</span>,
+                            <span class="text-blue-300">Collaboration</span>, and
+                            <span class="text-blue-300">Integrity</span>,
+                            we combine clean design, seamless UX, and optimized performance to build trust.
+                        </p>
+        
+                        <!-- Contact CTA -->
+                        <div class="mt-8" data-aos="fade-up" data-aos-delay="600">
+                            <p class="font-bold text-blue-300 mb-2">Want to collaborate or ask a question?</p>
+                            <a href="mailto:contact@bycodeit.dev"
+                                class="inline-flex items-center text-white font-bold hover:text-blue-300 transition">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 6.75A2.25 2.25 0 014.5 4.5h15a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-15A2.25 2.25 0 012.25 17.25V6.75zm1.5 0v.379l8.25 5.5 8.25-5.5V6.75h-16.5zm0 1.871v8.629h16.5V8.621l-8.25 5.5-8.25-5.5z" />
+                                </svg>
+                                contact@bycodeit.dev
                             </a>
                         </div>
+                    </div>
+                </div>
+        
 
+                <!-- Founder Quote -->
+                <div class="mb-16 text-center max-w-3xl mx-auto relative" data-aos="fade-up" data-aos-delay="600"
+                    data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+                
+                    <!-- Quote -->
+                    <blockquote
+                        class="italic text-white/90 font-[var(--font-accent)] text-xl leading-relaxed transform transition duration-700 hover:scale-105">
+                        “Every pixel we push is a reflection of your ambition. At ByCodeIt, we don’t just build websites — we build
+                        trust, momentum, and digital confidence.”
+                    </blockquote>
+                
+                    <!-- Founder Line with Crown Icon -->
+                    <div class="mt-6 flex items-center justify-center space-x-2">
+                        <svg class="w-6 h-6 text-blue-400 animate-bounce" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 20h14l-1-9-4 3-3-6-3 6-4-3-1 9z" />
+                        </svg>
+                        <p class="text-blue-300 font-semibold font-[var(--font-signature)]">
+                            Muhammed, Founder
+                        </p>
                     </div>
                 </div>
 
-                <!-- Quick Snapshot Row -->
-                <div class="row text-center pb-4 fw-bolder" data-aos="fade-up">
-                    <div class="col-12 col-md-4 mb-3 mb-md-0">
-                        <div class="snapshot-card">
-                            <i class="bi bi-calendar-check display-5 icon-dark-green"></i>
-                            <h5 class="mt-2">Founded</h5>
-                            <p class="mb-0">July 2025</p>
-                        </div>
+
+                <!-- Snapshot Cards -->
+                <div class="grid md:grid-cols-3 gap-8 text-center font-semibold">
+                
+                    <!-- Founded -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow transition transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 duration-300">
+                        <svg class="w-8 h-8 mx-auto text-blue-300 mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <h5 class="text-lg font-bold mb-1 font-[var(--font-display)]">Founded</h5>
+                        <p class="text-white/80 font-[var(--font-body)]">July 2025</p>
                     </div>
-                    <div class="col-12 col-md-4 mb-3 mb-md-0">
-                        <div class="snapshot-card">
-                            <i class="bi bi-code-slash display-5 icon-dark-green"></i>
-                            <h5 class="mt-2">Specialty</h5>
-                            <p class="mb-0">Frontend & Web Design</p>
-                        </div>
+                
+                    <!-- Specialty -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow transition transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 duration-300">
+                        <svg class="w-8 h-8 mx-auto text-blue-300 mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                        </svg>
+                        <h5 class="text-lg font-bold mb-1 font-[var(--font-display)]">Specialty</h5>
+                        <p class="text-white/80 font-[var(--font-body)]">Frontend & Web Design</p>
                     </div>
-                    <div class="col-12 col-md-4">
-                        <div class="snapshot-card">
-                            <i class="bi bi-people display-5 icon-dark-green"></i>
-                            <h5 class="mt-2">Core Audience</h5>
-                            <p class="mb-0">Startups & Growing Businesses</p>
-                        </div>
+                
+                    <!-- Core Audience -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow transition transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 duration-300">
+                        <svg class="w-8 h-8 mx-auto text-blue-300 mb-2" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17 20h5v-2a4 4 0 00-3-3.87M9 20h6M3 20h5v-2a4 4 0 00-3-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <h5 class="text-lg font-bold mb-1 font-[var(--font-display)]">Core Audience</h5>
+                        <p class="text-white/80 font-[var(--font-body)]">Startups & Growing Businesses</p>
                     </div>
+                
                 </div>
             </div>
         </section>
         <!-- End of About Section -->
 
 
-        <!-- New Services Section -->
-        <section class="bg-light py-5" id="services">
-            <div class="container">
-                <div class="row">
+        <!-- Services Section -->
+        <section id="services"
+            class="bg-gradient-to-br from-[#1e293b] via-[#0a0f2c] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
+        
+            <div class="max-w-7xl mx-auto">
+        
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-[var(--font-display)] tracking-tight">
+                        Services
+                    </h2>
+                    <p class="text-white/80 text-lg font-medium font-[var(--font-body)]">
+                        Solutions tailored to your business goals — built with precision and creativity.
+                    </p>
+                </div>
+        
+                <!-- Services Grid -->
+                <div class="grid md:grid-cols-3 gap-12">
 
-                    <div class="col-12 text-center mb-5" data-aos="fade-up">
-                        <h6 class="fw-bold">Services</h6>
-                        <p class="custom-dark-text">Solutions tailored to your business goals — built with precision and creativity.</p>
-                    </div>
-                    
-                    <!-- Service 1: Short -->
-                    <div class="col-lg-6 col-12">
-                        <div class="service-thumb mb-5" data-aos="fade-up">
-                            <a href="images/service/front-end.png">
-                                <img src="images/service/front-end.png" class="img-fluid service-image" alt="">
-                            </a>
-        
-                            <!-- <div class="portfolio-info">
-                                <h4 class="portfolio-title mb-0">Front-end Development</h4>
-        
-                                <p class="text-danger">Custom, responsive websites with React, Bootstrap, and Tailwind.</p>
-                            </div> -->
-                        </div>
-        
-                        <!-- Service 2: Tall -->
-                        <div class="service-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
-                            <a href="images/service/mobile.png">
-                                <img src="images/service/mobile.png" class="img-fluid service-image" alt="">
-                            </a>
-        
-                            <!-- <div class="portfolio-info">
-                                <h4 class="portfolio-title mb-0">Mobile-Friendly Design</h4>
-        
-                                <p class="text-success">Layouts that adapt beautifully to any screen size.</p>
-                            </div> -->
-                        </div>
-                    </div>
-        
-                    <!-- Service 3: Tall -->
-                    <div class="col-lg-6 col-12">
-                        <div class="service-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
-                            <a href="images/service/uiux.png">
-                                <img src="images/service/uiux.png" class="img-fluid service-image" alt="">
-                            </a>
-        
-                            <!-- <div class="portfolio-info">
-                                <h4 class="portfolio-title mb-0">UI/UX Design</h4>
-        
-                                <p class="text-warning">User-centered interfaces that drive engagement.</p>
-                            </div> -->
-                        </div>
-                        
-                        <!-- Service 4: Short -->
-                        <div class="service-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
-                            <a href="images/service/website.png">
-                                <img src="images/service/website.png" class="img-fluid service-image" alt="">
-                            </a>
-        
-                            <!-- <div class="portfolio-info">
-                                <h4 class="portfolio-title mb-0">Website Maintenance</h4>
-        
-                                <p class="text-info">Security, updates, and performance monitoring made simple.</p>
-                            </div> -->
+                    <!-- Front-end Development -->
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <!-- Use a clean graphic here, not the one with text baked in -->
+                        <img src="./assets/service-img/front-end.webp" alt="Front-end Development" class="w-full h-auto" />
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-blue-300 font-[var(--font-display)]">Front-end Development</h4>
+                            <p class="text-white/80 font-[var(--font-body)]">
+                                Custom, responsive websites with React, Bootstrap, and Tailwind.
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Service 5: Short -->
-                    <div class="col-lg-6 col-12">
-                        <div class="service-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
-                            <a href="images/service/seo.png">
-                                <img src="images/service/seo.png" class="img-fluid service-image" alt="">
-                            </a>
-
-                            <!-- <div class="portfolio-info">
-                                <h4 class="portfolio-title mb-0">SEO Optimization</h4>
-
-                                <p class="text-danger">Boost visibility with technical and on-page SEO strategies.</p>
-                            </div> -->
+                    <!-- Mobile-Friendly Design -->
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <img src="./assets/service-img/mobile.webp" alt="Mobile-Friendly Design" class="w-full h-auto" />
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-indigo-300 font-[var(--font-display)]">Mobile-Friendly Design
+                            </h4>
+                            <p class="text-white/80 font-[var(--font-body)]">Layouts that adapt beautifully to any screen size.
+                            </p>
                         </div>
                     </div>
-
-                    <!-- Service 6: Short -->
-                    <div class="col-lg-6 col-12">
-                        <div class="service-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
-                            <a href="images/service/consultation.png">
-                                <img src="images/service/consultation.png" class="img-fluid service-image" alt="">
-                            </a>
-
-                            <!-- <div class="portfolio-info">
-                                <h4 class="portfolio-title mb-0">Consultation</h4>
-
-                                <p class="text-success">Let’s shape your ideas into a custom web strategy that fits your business goals.</p>
-                            </div> -->
+        
+                    <!-- UI/UX Design -->
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <img src="./assets/service-img/uiux.webp" alt="UI/UX Design" class="w-full h-auto" />
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-pink-300 font-[var(--font-display)]">UI/UX Design</h4>
+                            <p class="text-white/80 font-[var(--font-body)]">User-centered interfaces that drive engagement.</p>
+                        </div>
+                    </div>
+        
+                    <!-- Website Maintenance -->
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+                        data-aos="fade-up" data-aos-delay="500">
+                        <img src="./assets/service-img/website.webp" alt="Website Maintenance" class="w-full h-auto" />
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-cyan-300 font-[var(--font-display)]">Website Maintenance</h4>
+                            <p class="text-white/80 font-[var(--font-body)]">Security, updates, and performance monitoring made
+                                simple.</p>
+                        </div>
+                    </div>
+        
+                    <!-- SEO Optimization -->
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+                        data-aos="fade-up" data-aos-delay="600">
+                        <img src="./assets/service-img/seo.webp" alt="SEO Optimization" class="w-full h-auto" />
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-purple-300 font-[var(--font-display)]">SEO Optimization</h4>
+                            <p class="text-white/80 font-[var(--font-body)]">Boost visibility with technical and on-page SEO
+                                strategies.</p>
+                        </div>
+                    </div>
+        
+                    <!-- Consultation -->
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+                        data-aos="fade-up" data-aos-delay="700">
+                        <img src="./assets/service-img/consultation.webp" alt="Consultation" class="w-full h-auto" />
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-blue-300 font-[var(--font-display)]">Consultation</h4>
+                            <p class="text-white/80 font-[var(--font-body)]">Let’s shape your ideas into a custom web strategy
+                                that fits your business goals.</p>
                         </div>
                     </div>
         
                 </div>
             </div>
         </section>
-        <!-- End of New Services section -->
+        <!-- End of Services Section -->
 
 
         <!-- Portfolio Section -->
-        <section class="section-padding portfolio-section" id="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center mb-5" data-aos="fade-up">
-                        <h6 class="fw-bold">Portfolio</h6>
-                        <p class="custom-dark-text">A showcase of work — starting with Raystones Exclusive Apartments.</p>
-                    </div>
+        <section id="portfolio"
+            class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
         
-                    <div class="col-lg-6 col-12">
-                        <div class="portfolio-thumb mb-5" data-aos="fade-up">
-                            <a href="https://raystonesapartments.com/" target="_blank" class="">
-                                <img src="images/portfolio/Raystones Exclusive Apartments.png" class="img-fluid portfolio-image"
-                                    alt="Raystones Exclusive Apartments">
-                            </a>
-                            <div class="portfolio-info mt-3">
-                                <h5 class="portfolio-title mb-0">Raystones Exclusive Apartments</h5>
-                                <p class="portfolio-tag fw-semibold">Front-end · UI/UX · Mobile Optimization</p>
-                                <p class="portfolio-description fw-semibold">
+            <div class="max-w-7xl mx-auto">
+        
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-[var(--font-display)] tracking-tight">
+                        Portfolio
+                    </h2>
+                    <p class="text-white/80 text-lg font-medium font-[var(--font-body)]">
+                        A showcase of work — starting with Raystones Exclusive Apartments.
+                    </p>
+                </div>
+        
+                <!-- Portfolio Grid -->
+                <div class="grid md:grid-cols-2 gap-12">
+        
+                    <!-- Raystones Project -->
+                    <div class="relative rounded-xl border border-transparent bg-gradient-to-r 
+                                from-blue-500/30 via-indigo-500/30 to-purple-500/30 bg-clip-border p-[1px]" data-aos="fade-up"
+                        data-aos-delay="200">
+                    
+                        <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg 
+                                    transition-transform duration-300 ease-out 
+                                    hover:-translate-y-2 hover:shadow-2xl">
+                    
+                            <div class="relative group">
+                                <img src="./assets/portfolio-img/Raystones Exclusive Apartments.png" alt="Raystones Exclusive Apartments"
+                                    class="w-full h-auto" />
+                                <div class="absolute inset-0 bg-black/60 flex items-center justify-center 
+                                            opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <a href="https://raystonesapartments.com/" target="_blank"
+                                        class="px-4 py-2 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600">
+                                        View Project
+                                    </a>
+                                </div>
+                            </div>
+                    
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-yellow-300 font-[var(--font-display)]">
+                                    Raystones Exclusive Apartments
+                                </h4>
+                                <p class="text-white/80 mb-4">Frontend · UI/UX · Mobile Optimization</p>
+                                <p class="text-white/80 mb-4">
                                     A modern, responsive website built for a luxury apartment complex in Ogun. Features include
                                     gallery integration, mobile-friendly design, and social media connectivity.
                                 </p>
-                                <ul class="portfolio-details">
+                                <ul class="text-white/70 space-y-2 text-sm">
                                     <li><strong>Tools:</strong> HTML, CSS, Bootstrap, AOS, JavaScript</li>
                                     <li><strong>Goal:</strong> Showcase elegance and drive bookings</li>
                                     <li><strong>Result:</strong> Improved engagement and brand visibility</li>
@@ -333,164 +537,298 @@
                             </div>
                         </div>
                     </div>
-        
-                    <div class="col-lg-6 col-12">
-        
-                        <div class="portfolio-thumb mb-5 startup-card d-flex align-items-center justify-content-center"
-                            data-aos="fade-up">
-                            <div class="text-center">
-                                <i class="bi bi-rocket fs-1 text-muted"></i>
-                                <h4 class="portfolio-title">Startup Showcase</h4>
-                                <p class="text-muted">Helping new businesses launch with confidence.</p>
+                    
+                    
+                    <!-- Roheey Cakes Project -->
+                    <div class="relative rounded-xl border border-transparent bg-gradient-to-r 
+                                from-blue-500/30 via-indigo-500/30 to-purple-500/30 bg-clip-border p-[1px]" data-aos="fade-up"
+                        data-aos-delay="300">
+                    
+                        <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg 
+                                    transition-transform duration-300 ease-out 
+                                    hover:-translate-y-2 hover:shadow-2xl">
+                    
+                            <div class="relative group">
+                                <img src="./assets/portfolio-img/roheeycakes.png" alt="Roheey Cakes & Cream" class="w-full h-auto" />
+                                <div class="absolute inset-0 bg-black/60 flex items-center justify-center 
+                                        opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <a href="https://roheeycakes.netlify.app/" target="_blank"
+                                        class="px-4 py-2 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600">
+                                        View Project
+                                    </a>
+                                </div>
+                            </div>
+                    
+                            <div class="p-6">
+                                <h4 class="text-xl font-bold mb-2 text-green-300 font-[var(--font-display)]">
+                                    Roheey Cakes & Cream
+                                </h4>
+                                <p class="text-white/80 mb-4">Frontend · UI/UX · Performance</p>
+                                <p class="text-white/80 mb-4">
+                                    A sleek, responsive landing page designed to showcase Roheey Cakes. Features include
+                                    animation, mobile optimization, and SEO enhancements.
+                                </p>
+                                <ul class="text-white/70 space-y-2 text-sm">
+                                    <li><strong>Tools:</strong> HTML, Tailwind CSS, JavaScript</li>
+                                    <li><strong>Goal:</strong> Build brand credibility and capture leads</li>
+                                    <li><strong>Result:</strong> Increased traffic and engagement</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <div class="portfolio-thumb mb-5 coming-soon-card d-flex align-items-center justify-content-center" data-aos="fade-up">
-                            <div class="text-center">
-                                <i class="bi bi-hourglass-split fs-1 text-muted"></i>
-                                <h4 class="portfolio-title">Next Project</h4>
-                                <p class="text-muted">Coming soon — something exciting is in the works.</p>
-                            </div>
-                        </div>
-
                     </div>
+        
+                </div>
+            </div>
+        
+            <!-- Showcase, Coming Soon, Collaboration Grid -->
+            <div class="max-w-full mx-auto mt-12 py-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+                    <!-- Startup Showcase -->
+                    <div class="relative bg-white/10 rounded-xl flex items-center justify-center h-64 shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl p-4 text-center overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-purple-500/10">
+                        </div>
+                        <div class="relative text-center">
+                            <i class="bi bi-rocket text-4xl text-blue-300 mb-2"></i>
+                            <h4 class="text-xl font-bold text-white">Startup Showcase</h4>
+                            <p class="text-white/70">Helping new businesses launch with confidence.</p>
+                        </div>
+                    </div>
+        
+                    <!-- Coming Soon -->
+                    <div class="relative bg-white/10 rounded-xl flex items-center justify-center h-64 shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl p-4 text-center overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-blue-500/10">
+                        </div>
+                        <div class="relative text-center">
+                            <i class="bi bi-hourglass-split text-4xl text-indigo-300 mb-2"></i>
+                            <h4 class="text-xl font-bold text-white">Next Project</h4>
+                            <p class="text-white/70">Coming soon — something exciting is in the works.</p>
+                        </div>
+                    </div>
+        
+                    <!-- Collaboration -->
+                    <div class="relative bg-white/10 rounded-xl flex items-center justify-center h-64 shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl p-4 text-center overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="600">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-indigo-500/10">
+                        </div>
+                        <div class="relative text-center">
+                            <i class="bi bi-chat-dots text-4xl text-purple-300 mb-2"></i>
+                            <h4 class="text-xl font-bold text-white">Open for Collaboration</h4>
+                            <p class="text-white/70">Let’s build something amazing together. Reach out and let’s turn your
+                                vision into reality.</p>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
         </section>
         <!-- End of Portfolio Section -->
         
 
-        <!-- New Testimonial Section -->
-        <section class="py-5 bg-light" id="testimonial">
-            <div class="container">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <h6 class="portfolio-heading fw-bold">Client Testimonials</h6>
-                        <p class="custom-dark-text">feedback from our partners and clients</p>
-                    </div>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials"
+            class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
+        
+            <div class="max-w-7xl mx-auto">
+        
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-[var(--font-display)] tracking-tight">
+                        Testimonials
+                    </h2>
+                    <p class="text-white/80 text-lg font-medium font-[var(--font-body)]">
+                        Hear from people I’ve worked with and the impact we created together.
+                    </p>
                 </div>
         
-                <div class="row g-4 justify-content-center">
+                <!-- Testimonials Grid -->
+                <div class="grid md:grid-cols-3 gap-8">
         
-                    <!-- Card 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card border-0 shadow-sm rounded-4 p-4 h-100 text-start">
-                            <img src="images/testimonial/client-raystones3.png" alt="Raystones Manager" class="testimonial-photo mb-3">
-
-                            <div class="testimonial-stars mb-3">
-                                <i class="bi bi-star-fill text-dark-green"></i>
-                                <i class="bi bi-star-fill text-dark-green"></i>
-                                <i class="bi bi-star-fill text-dark-green"></i>
-                                <i class="bi bi-star-fill text-dark-green"></i>
-                                <i class="bi bi-star-fill text-dark-green"></i>
-                            </div>
-                            <p class="mb-4">“ByCODEIT Solutions brought our vision to life — clean, fast, and exactly what we
-                            needed.”
-                                <span class="text-dark-green fw-bolder">Their professionalism and speed are unmatched.</span>
-                                “Working with ByCODEIT was seamless from start to finish.”
-                            </p>
-                            <div class="d-flex align-items-center justify-content-start">
-                                <div class="">Raystones Management</div>
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-8 flex flex-col justify-between 
+                                transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up">
+                        <p class="text-white/90 italic mb-6">
+                            "ByCodeIt transformed our online presence with a sleek, responsive site. Our engagement doubled
+                            within weeks."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/clients-img/client1.png" alt="Client 1"
+                                class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-white">Mr. Yemi Adebanjo</h4>
+                                <p class="text-white/70 text-sm">Founder, Raystones Apartments</p>
                             </div>
                         </div>
                     </div>
+        
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-8 flex flex-col justify-between 
+                                transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <p class="text-white/90 italic mb-6">
+                            "His attention to detail and design sense is unmatched. The project exceeded our expectations."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/clients-img/client2.png" alt="Client 2"
+                                class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-white">Regina Latoye</h4>
+                                <p class="text-white/70 text-sm">CEO, Startup Hub</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-8 flex flex-col justify-between 
+                                transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <p class="text-white/90 italic mb-6">
+                            "Working with ByCodeIt was seamless. He delivered on time and brought fresh ideas to the table."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/clients-img/client3.png" alt="Client 3"
+                                class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-white">Aisha Bello</h4>
+                                <p class="text-white/70 text-sm">Roheey Cakes Management</p>
+                            </div>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
         </section>
-        <!-- End of Testimonial Section -->
+        <!-- End of Testimonials Section -->
+
+
 
         <!-- Project Counter -->
-        <!-- <section class="bg-dark-green text-white py-5" id="stats">
-            <div class="container text-center">
-                <div class="row g-4">
-                    <div class="col-md-3 col-6">
-                        <h2 class="counter" data-target="50">0</h2>
-                        <p>Projects Completed</p>
+        <section id="stats" class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+        
+                    <!-- Counter 1 -->
+                    <div class="transition-transform hover:scale-105">
+                        <h2 class="counter text-5xl font-extrabold mb-2" data-target="5">0</h2>
+                        <p class="text-lg font-medium text-white/80">Projects Completed</p>
                     </div>
-                    <div class="col-md-3 col-6">
-                        <h2 class="counter" data-target="20">0</h2>
-                        <p>Happy Clients</p>
+        
+                    <!-- Counter 2 -->
+                    <div class="transition-transform hover:scale-105">
+                        <h2 class="counter text-5xl font-extrabold mb-2" data-target="20">0</h2>
+                        <p class="text-lg font-medium text-white/80">Happy Clients</p>
                     </div>
-                    <div class="col-md-3 col-6">
-                        <h2 class="counter" data-target="5">0</h2>
-                        <p>Years in Business</p>
+        
+                    <!-- Counter 3 -->
+                    <div class="transition-transform hover:scale-105">
+                        <h2 class="counter text-5xl font-extrabold mb-2" data-target="5">0</h2>
+                        <p class="text-lg font-medium text-white/80">Years in Business</p>
                     </div>
-                    <div class="col-md-3 col-6">
-                        <h2 class="counter" data-target="100">0</h2>
-                        <p>Cups of Coffee</p>
+        
+                    <!-- Counter 4 -->
+                    <div class="transition-transform hover:scale-105">
+                        <h2 class="counter text-5xl font-extrabold mb-2" data-target="100">0</h2>
+                        <p class="text-lg font-medium text-white/80">Cups of Coffee</p>
                     </div>
+        
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- End of Project Counter -->
 
-    
+
         <!-- Contact Section -->
-        <section class="section-padding contact-section" id="connect">
-            <div class="container">
-                <div class="row align-items-center">
+        <section id="connect" class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] py-24 text-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
         
                     <!-- Contact Form -->
-                    <div class="col-lg-6 col-12">
-                        <h6 class="mb-1 text-dark-green" data-aos="fade-up">Let’s Connect</h6>
-                        <p class="custom-dark-text mb-4" data-aos="fade-up">
-                            Whether you have a project in mind or just a question — we’d love to hear from you.
+                    <div>
+                        <h6 class="text-3xl font-extrabold tracking-wide mb-4" data-aos="fade-up">Let’s Connect</h6>
+                        <p class="text-white/80 mb-8 leading-relaxed max-w-lg" data-aos="fade-up">
+                            Whether you have a project in mind or just a question — I’d love to hear from you.
                         </p>
         
-                        <form action="#" method="post" class="contact-form" role="form" data-aos="fade-up">
-                            <div class="row g-4">
-                                <div class="col-lg-6 col-12">
-                                    <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
-                                    <input type="text" name="name" id="name" class="form-control custom-input"
-                                        placeholder="Full name" required>
+                        <form action="#" method="post" class="space-y-6" data-aos="fade-up">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Name -->
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-white mb-1">
+                                        Name <sup class="text-red-400">*</sup>
+                                    </label>
+                                    <input type="text" id="name" name="name" required placeholder="Full name"
+                                        class="w-full rounded-lg border border-white/20 bg-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 transition duration-300 outline-none hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
                                 </div>
         
-                                <div class="col-lg-6 col-12">
-                                    <label for="email" class="form-label">Email <sup class="text-danger">*</sup></label>
-                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                        class="form-control custom-input" placeholder="Email address" required>
-                                </div>
-        
-                                <div class="col-12">
-                                    <label for="message" class="form-label">Message <sup class="text-danger">*</sup></label>
-                                    <textarea name="message" rows="2" class="form-control custom-input" id="message"
-                                        placeholder="Share your idea or request…" required></textarea>
-                                </div>
-        
-                                <div class="col-lg-4 col-12">
-                                    <button type="submit" class="btn btn-outline-success">Send Message</button>
+                                <!-- Email -->
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-white mb-1">
+                                        Email <sup class="text-red-400">*</sup>
+                                    </label>
+                                    <input type="email" id="email" name="email" required placeholder="Email address"
+                                        class="w-full rounded-lg border border-white/20 bg-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 transition duration-300 outline-none hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
                                 </div>
                             </div>
+        
+                            <!-- Message -->
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-white mb-1">
+                                    Message <sup class="text-red-400">*</sup>
+                                </label>
+                                <textarea id="message" name="message" rows="3" required
+                                    placeholder="Share your idea or request…"
+                                    class="w-full rounded-lg border border-white/20 bg-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 transition duration-300 outline-none hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"></textarea>
+                            </div>
+        
+                            <button type="submit"
+                                class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]">
+                                Send Message
+                            </button>
                         </form>
                     </div>
+        
+                    <!-- Contact Info Card -->
+                    <div data-aos="fade-up"
+                        class="bg-white/10 backdrop-blur-md shadow-lg border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition duration-300">
+                        <h5 class="text-xl font-semibold mb-3">Prefer Direct Contact?</h5>
+                        <p class="text-white/80 mb-6 max-w-md">
+                            Reach out instantly via WhatsApp or Email — I usually reply within minutes during working hours.
+                        </p>
+        
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <!-- WhatsApp -->
+                            <a href="https://bit.ly/bycodeitsolutions" target="_blank"
+                                class="flex items-center justify-center border border-blue-400 text-blue-300 hover:bg-blue-500 hover:text-white font-medium rounded-lg px-6 py-3 transition duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.854 7.854 0 0 0 8.002 0C3.582 0 .002 3.582.002 8c0 1.41.367 2.79 1.063 4.004L0 16l4.063-1.063A7.963 7.963 0 0 0 8.002 16c4.418 0 8-3.582 8-8 0-2.137-.832-4.146-2.401-5.674zM8.002 14.5a6.48 6.48 0 0 1-3.356-.93l-.24-.144-2.406.63.642-2.344-.156-.24A6.48 6.48 0 0 1 1.5 8c0-3.59 2.912-6.5 6.502-6.5 1.74 0 3.376.676 4.604 1.902A6.48 6.48 0 0 1 14.5 8c0 3.59-2.912 6.5-6.498 6.5z" />
+                                    <path
+                                        d="M11.603 9.797c-.2-.1-1.176-.58-1.36-.646-.184-.067-.318-.1-.452.1-.133.2-.518.646-.635.78-.117.133-.233.15-.433.05-.2-.1-.843-.31-1.605-.99-.593-.53-.993-1.183-1.11-1.383-.117-.2-.012-.3.088-.4.09-.09.2-.233.3-.35.1-.117.133-.2.2-.333.067-.133.033-.25-.017-.35-.05-.1-.452-1.09-.62-1.49-.163-.39-.33-.34-.452-.35-.117-.007-.25-.01-.383-.01s-.35.05-.533.25c-.184.2-.7.683-.7 1.667s.717 1.933.817 2.067c.1.133 1.41 2.15 3.417 3.017.478.207.85.33 1.14.423.478.152.913.13 1.257.08.383-.057 1.176-.48 1.343-.943.167-.463.167-.86.117-.943-.05-.083-.183-.133-.383-.233z" />
+                                </svg>
+                                WhatsApp
+                            </a>
+        
+                            <!-- Email -->
+                            <a href="mailto:contact@bycodeit.dev?subject=Project%20Inquiry&body=Hi%20ByCODEIT%2C%20I%20have%20an%20idea..." class="flex items-center justify-center border border-blue-400 text-blue-300 
+                                    hover:bg-blue-500 hover:text-white font-medium rounded-lg px-6 py-3 
+                                    transition duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.7)] hover:-translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mr-2">
+                                    <path d="M2 4a2 2 0 0 1 2-2h16a2 
+                                            2 0 0 1 2 2v16a2 2 0 0 1-2 
+                                            2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 
+                                            13l8-8.99V4H4zm16 2.41-7.59 
+                                            7.59a1 1 0 0 1-1.41 0L4 
+                                            6.41V20h16V6.41z" />
+                                </svg>
+                                Email
+                            </a>
 
-                    <!-- Combined Contact Card -->
-                    <div class="col-lg-6 col-12 mt-5 mt-lg-0" data-aos="fade-up">
-                        <div class="p-4 h-100 d-flex flex-column justify-content-center text-center card-border">
-                            <h5 class="text-dark-green mb-3">Prefer Direct Contact?</h5>
-                            <p class="mb-4">Reach out instantly via WhatsApp or Email — I usually reply within minutes during
-                                working hours.</p>
-                    
-                            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-                                <!-- WhatsApp Button -->
-                                <a href="https://bit.ly/bycodeitsolutions" target="_blank"
-                                    class="btn btn-outline-success d-inline-flex align-items-center justify-content-center" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="ByCODEIT Solutions">
-                                    <i class="bi bi-whatsapp me-2"></i> WhatsApp
-                                </a>
-
-                    
-                                <!-- Email Button -->
-                                <a href="mailto:contact@bycodeit.dev?subject=Project%20Inquiry&body=Hi%20ByCODEIT%2C%20I%20have%20an%20idea%20I'd%20like%20to%20discuss..."
-                                    class="btn btn-outline-success d-inline-flex align-items-center justify-content-center" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="contact@bycodeit.dev">
-                                    <i class="bi bi-envelope-open me-2"></i> Email
-                                </a>
-
-                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -498,78 +836,119 @@
 
     </main>
 
-    <!-- Footer Section -->
-    <footer class="site-footer-modern">
-        <div class="container">
-            <div class="row justify-content-between align-items-start gy-4">
     
-                <!-- Brand Info -->
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="footer-brand">ByCODEIT Solutions</h5>
-                    <p class="footer-description">
-                        Your Vision, Our Code.<br>
-                        Custom websites and digital solutions built with modern technologies.
-                    </p>
-                </div>
-    
-                <!-- Quick Links -->
-                <div class="col-lg-4 col-md-6">
-                    <h6 class="footer-heading">Quick Links</h6>
-                    <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <!-- <li><a href="#contact">Contact</a></li> -->
-                    </ul>
-                </div>
-    
-                <!-- Social Media -->
-                <div class="col-lg-4 col-md-12 text-lg-end text-md-start">
-                    <h6 class="footer-heading">Connect With Me</h6>
-                    <div class="footer-social">
-                        <a href="https://wa.me/2349024986943" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://github.com/ByCODEIT" target="_blank"><i class="bi bi-github"></i></a>
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                    <p class="footer-location mt-3">Based in Ogun, Nigeria · Available Mon–Sat</p>
 
-                    <p class="footer-email mt-2">
-                        <i class="bi bi-envelope-fill text-white me-1"></i>
-                        <a href="mailto:contact@bycodeit.dev">contact@bycodeit.dev</a>
-                    </p>
-                </div>
     
+    <!-- Footer Section -->
+    <footer class="relative bg-[#0a0f2c] text-gray-400 py-20 px-6 md:px-12 overflow-hidden font-[var(--font-body)]">
+        <!-- Subtle animated background glow -->
+        <div
+            class="absolute inset-0 bg-gradient-to-tr from-indigo-700/10 via-cyan-500/5 to-fuchsia-600/10 animate-pulse pointer-events-none">
+        </div>
+    
+        <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-14">
+    
+            <!-- Brand Section -->
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-4 tracking-tight font-[var(--font-display)]">
+                    ByCodeIt <span class="text-indigo-400">Solutions</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed max-w-sm">
+                    We code your vision — transforming ideas into beautiful, scalable digital experiences for modern brands.
+                </p>
+    
+                <!-- Social Icons -->
+                <div class="flex space-x-5 mt-6">
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/2349024986943" target="_blank"
+                        class="text-gray-400 hover:text-green-500 transition transform hover:scale-110 hover:drop-shadow-[0_0_12px_#3b82f6]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 32 32" fill="currentColor">
+                            <path
+                                d="M16 .5C7.44.5.5 7.44.5 16c0 2.8.73 5.53 2.12 7.94L1 31l7.28-1.91A15.5 15.5 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5zm0 28a12.4 12.4 0 0 1-6.32-1.74l-.45-.27-4.32 1.13 1.15-4.2-.28-.44A12.4 12.4 0 0 1 3.6 16c0-6.84 5.56-12.4 12.4-12.4 3.31 0 6.42 1.29 8.76 3.63A12.4 12.4 0 0 1 28.4 16c0 6.84-5.56 12.4-12.4 12.4z" />
+                            <path
+                                d="M23.2 19.3c-.38-.19-2.24-1.1-2.59-1.23-.35-.13-.61-.19-.87.19-.26.38-1 1.23-1.22 1.48-.22.26-.45.29-.83.1-.38-.19-1.6-.59-3.05-1.87-1.13-1-1.9-2.23-2.12-2.61-.22-.38-.02-.58.17-.77.18-.18.38-.45.57-.67.19-.22.25-.38.38-.64.13-.26.06-.48-.03-.67-.1-.19-.87-2.1-1.19-2.88-.31-.75-.63-.65-.87-.66-.22-.01-.48-.02-.74-.02s-.68.1-1.04.48c-.35.38-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.19.26 2.76 4.23 6.7 5.93.94.41 1.67.65 2.24.83.94.3 1.8.26 2.48.16.76-.11 2.24-.91 2.56-1.78.32-.87.32-1.61.22-1.78-.1-.16-.35-.26-.74-.45z" />
+                        </svg>
+                    </a>
+    
+                    <!-- GitHub -->
+                    <a href="https://github.com/ByCodeIt" target="_blank"
+                        class="text-gray-400 hover:text-white transition transform hover:scale-110 hover:drop-shadow-[0_0_12px_#ffffff]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 2.1 3.6 1.5.1-.8.4-1.4.8-1.7-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z" />
+                        </svg>
+                    </a>
+    
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110 hover:drop-shadow-[0_0_12px_#60a5fa]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5C4.98 5 3.9 6 2.5 6S0 5 0 3.5 1.1 1 2.5 1s2.48 1 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.8-2.2 3.7-2.2 4 0 4.8 2.6 4.8 6V24h-4v-7.9c0-1.9 0-4.3-2.6-4.3-2.6 0-3 2-3 4.1V24h-4V8z" />
+                        </svg>
+                    </a>
+    
+                    <!-- Twitter/X -->
+                    <a href="#" target="_blank"
+                        class="text-gray-400 hover:text-sky-400 transition transform hover:scale-110 hover:drop-shadow-[0_0_12px_#38bdf8]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.4 4.8c-.8.4-1.7.6-2.6.8a4.5 4.5 0 001.9-2.5c-.9.6-1.9 1-3 1.2a4.5 4.5 0 00-7.7 4.1A12.8 12.8 0 013 3.6a4.5 4.5 0 001.4 6 4.5 4.5 0 01-2-.6v.1a4.5 4.5 0 003.6 4.4 4.5 4.5 0 01-2 .1 4.5 4.5 0 004.2 3.1A9 9 0 012 19.5a12.7 12.7 0 006.9 2c8.3 0 12.8-6.9 12.8-12.8v-.6c.9-.6 1.7-1.4 2.3-2.3z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
     
-            <hr class="footer-divider">
-    
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="footer-copy">© 2025 ByCODEIT Solutions. All Rights Reserved.</p>
-                </div>
+            <!-- Navigation -->
+            <div>
+                <h3 class="text-white text-xl font-semibold mb-5 font-[var(--font-display)]">Explore</h3>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="hover:text-indigo-400 transition-colors duration-300">About</a></li>
+                    <li><a href="#services" class="hover:text-indigo-400 transition-colors duration-300">Services</a></li>
+                    <li><a href="#portfolio" class="hover:text-indigo-400 transition-colors duration-300">Portfolio</a></li>
+                    <li><a href="#connect" class="hover:text-indigo-400 transition-colors duration-300">Contact</a></li>
+                </ul>
             </div>
+            
+            <!-- Contact Section -->
+            <div>
+                <h3 class="text-white text-xl font-semibold mb-5 font-[var(--font-display)]">Let’s Build Together</h3>
+                <p class="text-gray-300 mb-6"> Have a project idea or need expert frontend support? Let’s collaborate. </p>
+
+                <a href="mailto:contact@bycodeit.dev" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg 
+                                                                bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium 
+                                                                hover:from-blue-500 hover:to-indigo-500 transition shadow-lg 
+                                                                hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
+                
+                    <!-- Envelope Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4z" />
+                        <path
+                            d="M0 6.383v5.634L5.803 8.482 0 6.383zM6.761 9.07l-6.76 3.57A2 2 0 0 0 2 14h12a2 2 0 0 0 1.999-1.36l-6.76-3.57L8 10.583l-1.239-.513zM10.197 8.482 16 12.017V6.383l-5.803 2.099z" />
+                    </svg>
+                
+                    contact@bycodeit.dev
+                </a>
+
+                <p class="text-gray-500 mt-4 text-sm">Based in Ogun, Nigeria · Available Mon–Sat</p>
+            </div>
+            </div>
+            
+            <!-- Bottom Divider -->
+            <div
+                class="relative max-w-7xl mx-auto mt-16 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 text-center md:text-left gap-3">
+                <p>© 2025 ByCodeIt Solutions. All Rights Reserved.</p>
+                <p>
+                    Designed & coded with ❤️ <span class="text-indigo-400 font-medium">ByCodeIt</span>
+                </p>
         </div>
     </footer>
     <!-- End of Footer Section -->
 
 
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/app.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/scrollspy.min.js"></script>
-    <script src="js/custom.js"></script>
-
-
-    <script>
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-            new bootstrap.Tooltip(tooltipTriggerEl);
-        });
-    </script>
+    <!-- JAVASCRIPT FILE -->
+    <script src="./src/app.js"></script>
 
 </body>
 
