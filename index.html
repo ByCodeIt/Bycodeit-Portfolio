@@ -1,13 +1,11 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth antialiased">
 
 <head>
-    <!-- Basic Meta Tags -->
+    <!-- Basic Meta -->
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a3d62" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#1e272e" media="(prefers-color-scheme: dark)" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="MobileOptimized" content="320" />
@@ -15,76 +13,95 @@
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="7 days" />
     <meta name="author" content="ByCodeIt Solutions" />
-    <meta name="generator" content="ByCodeIt Solutions - https://bycodeit.dev - 2025" />
+    <meta name="generator" content="ByCodeIt Solutions – https://bycodeit.dev – 2025" />
 
-    <!-- SEO Meta Tags -->
-    <title>ByCodeIt Solutions | Your Vision Our Code</title>
-    <meta name="description" content="ByCodeIt Solutions builds modern, responsive, and SEO-optimized websites for businesses and startups in Nigeria and beyond." />
-    <meta name="keywords" content="frontend developer, web developer, website design, responsive websites, UI UX design, React developer, Tailwind CSS, ByCodeIt Solutions, Nigeria web developer" />
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0a3d62" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1e272e" media="(prefers-color-scheme: dark)" />
+
+    <!-- SEO Meta -->
+    <title>ByCodeIt Solutions | Your Vision, Our Code</title>
+    <meta name="description" content="ByCodeIt Solutions builds modern, SEO-optimized, 
+                and mobile-first websites for businesses and startups worldwide." />
+
+    <meta name="keywords" content="frontend developer, web developer, website design, 
+                responsive websites, UI/UX design, React developer, Tailwind CSS, ByCodeIt Solutions, Nigeria web developer" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="ByCodeIt Solutions | We Code Your Vision" />
-    <meta property="og:description" content="ByCodeIt Solutions builds custom, mobile-optimized, and SEO-ready websites for businesses in Nigeria and internationally." />
+    <meta property="og:description" content="Custom, mobile-optimized, and SEO-ready websites built by ByCodeIt Solutions." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bycodeit.dev" />
     <meta property="og:image" content="https://bycodeit.dev/assets/og-image.jpg" />
     <meta property="og:site_name" content="ByCodeIt Solutions" />
 
-    <!-- Twitter Cards -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ByCodeIt Solutions | We Code Your Vision" />
-    <meta name="twitter:description" content="Custom websites, UI/UX design, and modern frontend development for businesses that want to stand out." />
+    <meta name="twitter:description" content="Custom websites, UI/UX design, and premium frontend development for brands that stand out." />
     <meta name="twitter:image" content="https://bycodeit.dev/assets/og-image.jpg" />
     <meta name="twitter:site" content="@bycodeit" />
     <meta name="twitter:creator" content="@bycodeit" />
 
-    <!-- Favicons and Apple Touch -->
-    <link rel="icon" href="./assets/ico-img/bycodeit-ico.png" type="image/x-icon" />
+    <!-- Favicon & Apple Touch -->
+    <link rel="icon" href="./assets/ico-img/bycodeit-ico.png" type="image/png" />
     <link rel="apple-touch-icon" href="./assets/ico-img/bycodeit-ico.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="ByCodeIt Solutions" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- Canonical & Alternate Links -->
+    <!-- Canonical & Alternate -->
     <link rel="canonical" href="https://bycodeit.dev" />
-    <link rel="alternate" href="https://bycodeit.dev" hreflang="en" />
+    <link rel="alternate" hreflang="en" href="https://bycodeit.dev" />
 
-    <!-- Performance Enhancements -->
+    <!-- Performance -->
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <link rel="dns-prefetch" href="//bycodeit.dev" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <meta http-equiv="cleartype" content="on" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="./assets/logo-img/ByCodeIt.png" />
+    <link rel="preload" as="image" href="./assets/background-img/background5.jpg">
 
-    <!-- Tailwind CSS -->
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind & Custom Styles -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./src/custom.css" />
 
-    <!-- Logo image preload -->
-    <link rel="preload" as="image" href="./assets/logo-img/ByCodeIt.png">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
 </head>
 
 
 
-<body>
+<body class="antialiased text-gray-100 bg-[#0a0f2c] scroll-smooth overflow-x-hidden">
 
     <main id="main">
 
         <!-- Skip to Content Link (Accessibility) -->
-        <a href="#main" class="sr-only focus:not-sr-only absolute top-2 left-2 bg-blue-600 text-white px-4 py-2 rounded">
+        <a href="#main" class="sr-only focus:not-sr-only absolute top-4 left-4 bg-blue-600 
+                                text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300">
             Skip to content
         </a>
 
         <!-- Navigation Section -->
-        <nav id="navbar" aria-label="Main navigation"
-            class="fixed top-0 left-0 w-full bg-[#0a0f2c]/90 backdrop-blur-md shadow-md z-50 transition duration-300">
-            <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-22 flex items-center justify-between h-25 relative">
+        <nav id="navbar" aria-label="Main navigation" class="fixed top-0 left-0 w-full bg-[#0a0f2c]/90 
+                                        backdrop-blur-md shadow-md z-50 transition duration-300">
+
+            <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-20 flex items-center justify-between py-4 md:py-5 lg:py-6 relative">
+        
         
                 <!-- Logo -->
-                <a href="index.html"
-                    class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
-                    <img src="./assets/logo-img/ByCodeIt.png" alt="ByCodeIt Logo" class="h-6 w-auto lg:h-8" />
-                    <h2 class="text-1xl font-bold text-white tracking-tight font-[var(--font-display)] md:text-2xl lg:text-3xl">
+                <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 pr-2 sm:pr-4 
+                                            focus-visible:ring-2 focus-visible:ring-blue-400 
+                                            focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0f2c] 
+                                            rounded-lg transition">
+                
+                    <img src="./assets/logo-img/ByCodeIt.png" alt="ByCodeIt Logo" class="h-7 w-auto sm:h-8 lg:h-9" />
+                
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight font-(--font-display) whitespace-nowrap">
                         ByCodeIt <span class="text-blue-400">Solutions</span>
                     </h2>
                 </a>
@@ -99,49 +116,53 @@
                 </button>
         
                 <!-- Desktop Navigation Links + CTA -->
-                <div class="hidden md:flex items-center space-x-10 text-sm font-medium text-white font-[var(--font-display)]">
+                <div class="hidden md:flex items-center space-x-10 text-sm text-white font-(--font-display)">
         
                     <!-- Navigation Links -->
                     <div id="navbarNav" class="flex items-center space-x-8">
-                        <a href="#hero"
-                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
-                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+
+                        <a href="#hero" class="relative transition duration-300 hover:text-blue-400 
+                                                focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
+                                                hover:after:w-full after:absolute after:bottom-0 after:left-0 
+                                                after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
                             Home
                         </a>
-                        <a href="#about"
-                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
-                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                        <a href="#about" class="relative transition duration-300 hover:text-blue-400 focus:outline-none 
+                                                focus:ring-2 focus:ring-blue-400 rounded
+                                                hover:after:w-full after:absolute after:bottom-0 after:left-0 
+                                                after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
                             The Brand
                         </a>
-                        <a href="#services"
-                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
-                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                        <a href="#services" class="relative transition duration-300 hover:text-blue-400 
+                                                    focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
+                                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] 
+                                                    after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
                             Services
                         </a>
-                        <a href="#portfolio"
-                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
-                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                        <a href="#portfolio" class="relative transition duration-300 hover:text-blue-400 focus:outline-none 
+                                                    focus:ring-2 focus:ring-blue-400 rounded
+                                                    hover:after:w-full after:absolute after:bottom-0 
+                                                    after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all 
+                                                    after:duration-300">
                             Portfolio
                         </a>
-                        <a href="#connect"
-                            class="relative transition duration-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
-                                        hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
+                        <a href="#connect" class="relative transition duration-300 hover:text-blue-400 focus:outline-none 
+                                                    focus:ring-2 focus:ring-blue-400 rounded hover:after:w-full 
+                                                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 
+                                                    after:bg-blue-400 after:transition-all after:duration-300">
                             Connect
                         </a>
                     </div>
         
                     <!-- CTA Button -->
-                    <a href="#connect"
-                        class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium
-                        hover:from-blue-500 hover:to-indigo-500 transition shadow-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <a href="#connect" class="inline-flex items-center gap-2 px-5 py-2 rounded-lg 
+                                                bg-linear-to-r from-blue-600 to-indigo-600 
+                                                text-white font-medium hover:from-blue-500 
+                                                hover:to-indigo-500 hover:scale-[1.03] transition shadow-lg 
+                                                hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] focus:outline-none 
+                                                focus:ring-2 focus:ring-blue-400">
                         Hire Me
                     </a>
-                </div>
-
-        
-                <!-- Scroll Progress Bar integrated inside Navbar -->
-                <div id="progressBar"
-                    class="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-blue-500 to-indigo-500 w-0 transition-all duration-200 ease-out">
                 </div>
             </div>
         </nav>
@@ -152,14 +173,19 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobileMenu"
-            class="fixed top-0 right-0 w-64 h-full bg-[#0a0f2c] z-50 text-white font-[var(--font-display)] shadow-lg transform translate-x-full transition-transform duration-300 md:hidden"
-            role="dialog" aria-modal="true" aria-label="Mobile menu">
+        <div id="mobileMenu" class="fixed top-0 right-0 w-64 h-full bg-[#0a0f2c] z-50 text-white font-(--font-display) 
+                                    shadow-[0_0_25px_rgba(0,0,0,0.5)] transform translate-x-full 
+                                    transition-transform duration-300 md:hidden"
+                                    role="dialog" aria-modal="true" aria-label="Mobile menu">
         
             <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+
                 <h3 class="text-lg font-semibold">Menu</h3>
-                <button aria-label="Close menu" onclick="closeMenu()"
-                    class="focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
+
+                <button aria-label="Close menu" onclick="closeMenu()" class="focus:outline-none focus:ring-2 
+                                                                            focus:ring-blue-400 rounded hover:rotate-90 transition-transform 
+                                                                            duration-300">
+
                     <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -188,39 +214,43 @@
 
 
         <!-- New Hero Section -->
-        <section id="hero" class="relative min-h-screen flex items-center justify-center px-6 py-24 font-[var(--font-display)]
-                                    bg-cover bg-center bg-no-repeat text-white"
-            style="background-image: url('./assets/background-img/background5.webp');">
+        <section id="hero" role="banner" class="relative min-h-screen flex items-center justify-center px-6 py-24 
+                                                font-(--font-display) bg-cover bg-center bg-no-repeat text-white"
+                                        style="background-image: url('./assets/background-img/background5.jpg');">
         
             <!-- Overlay for readability -->
-            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="absolute inset-0 bg-black/60 sm:bg-black/50"></div>
+
         
             <!-- Content -->
-            <div class="relative z-10 max-w-4xl text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="relative z-10 max-w-4xl text-center opacity-0 translate-y-6 transition-all duration-1000 ease-out"
+                data-aos="fade-up" data-aos-delay="900">
+
+
         
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-snug md:leading-tight mb-8 tracking-tight">
+
                     Elevate Your Brand with
-                    <span
-                        class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent drop-shadow-md font-[var(--font-accent)]">
+                    <span class="bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent drop-shadow-md font-(--font-accent)">
                         Front-End & Web Design
                     </span>
                     Services.
                 </h1>
         
-                <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-[var(--font-body)]">
+                <p class="text-lg md:text-xl text-white/90 mt-4 mb-10 max-w-2xl mx-auto font-(--font-body)">
                     ByCodeIt delivers sleek, responsive, and user-focused digital experiences.
                 </p>
         
                 
                 <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10">
                 
                     <!-- Primary CTA -->
                     <a href="#connect" class="inline-flex items-center gap-2 px-7 py-3 rounded-lg 
-                            bg-white text-[#0a0f2c] font-semibold shadow-md
-                            transition-all duration-300 ease-in-out
-                            hover:shadow-[0_0_20px_4px_rgba(59,130,246,0.5)]
-                            hover:ring-2 hover:ring-blue-400/70">
+                                                bg-white text-[#0a0f2c] font-semibold shadow-md
+                                                transition-all duration-300 ease-in-out
+                                                hover:shadow-[0_0_20px_4px_rgba(59,130,246,0.5)]
+                                                hover:ring-2 hover:ring-blue-400/70">
                 
                         <!-- Premium Icon -->
                         <svg class="w-5 h-5 text-[#0a0f2c]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -232,10 +262,10 @@
                 
                     <!-- Secondary CTA -->
                     <a href="#portfolio" class="inline-flex items-center gap-2 px-7 py-3 rounded-lg 
-                            bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold 
-                            shadow-md transition-all duration-300 ease-in-out
-                            hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.5)]
-                            hover:ring-2 hover:ring-indigo-400/70">
+                                                bg-linear-to-r from-blue-600 to-indigo-600 text-white font-semibold 
+                                                shadow-md transition-all duration-300 ease-in-out
+                                                hover:shadow-[0_0_20px_4px_rgba(99,102,241,0.5)]
+                                                hover:ring-2 hover:ring-indigo-400/70">
                 
                         <!-- Premium Icon -->
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -246,28 +276,22 @@
                         <span>View Portfolio</span>
                     </a>
                 </div>
-        
-            <!-- Scroll Indicator -->
-            <!-- <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
-                <a href="#about" class="animate-bounce text-white/70 hover:text-white transition">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
-            </div> -->
+            </div>
         </section>
         <!-- End of Hero Section -->
 
 
         <!-- About Section -->
-        <section id="about"
-            class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
+        <section id="about" class="bg-linear-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] 
+                                    text-white px-6 py-24 md:px-12 lg:px-24">
+
+            <div class="absolute inset-0 bg-linear-to-b from-black/20 to-transparent"></div>
         
             <div class="max-w-7xl mx-auto">
         
                 <!-- Heading -->
-                <h2 class="text-4xl font-extrabold text-center md:text-left mb-12 font-[var(--font-display)] tracking-tight"
-                    data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center md:text-left font-(--font-display) 
+                            tracking-tight leading-tight" data-aos="fade-up">
                     Your Vision, Our Code.
                 </h2>
         
@@ -276,14 +300,15 @@
         
                     <!-- Left Column -->
                     <div data-aos="fade-up" data-aos-delay="300">
-                        <p class="text-lg leading-relaxed font-[var(--font-body)]">
+
+                        <p class="text-lg leading-relaxed font-(--font-body) text-white/90">
                             <strong>ByCodeIt Solutions</strong> is a tech startup dedicated to transforming ideas into sleek,
                             high‑performing digital experiences. We specialize in
                             <span class="text-blue-300">custom‑built websites</span>,
                             <span class="text-blue-300">responsive front‑end solutions</span>, and
                             <span class="text-blue-300">modern React applications</span> that help businesses stand out.
                         </p>
-                        <p class="mt-6 text-lg leading-relaxed font-[var(--font-body)]">
+                        <p class="mt-6 text-lg leading-relaxed font-(--font-body)">
                             Our mission is simple: <em>to code your vision into reality</em> — crafting websites that are not
                             only
                             visually striking, but also intuitive, fast, and built for growth.
@@ -292,12 +317,12 @@
         
                     <!-- Right Column -->
                     <div data-aos="fade-up" data-aos-delay="500">
-                        <p class="text-lg leading-relaxed font-[var(--font-body)]">
+                        <p class="text-lg leading-relaxed font-(--font-body)">
                             Whether serving small business owners, growing startups, or established brands, every project is
                             tailored to
                             unique goals and audiences.
                         </p>
-                        <p class="mt-6 text-lg leading-relaxed font-[var(--font-body)]">
+                        <p class="mt-6 text-lg leading-relaxed font-(--font-body)">
                             Guided by values of <span class="text-blue-300">Excellence</span>,
                             <span class="text-blue-300">Innovation</span>,
                             <span class="text-blue-300">Collaboration</span>, and
@@ -327,8 +352,8 @@
                     data-aos-duration="1000" data-aos-easing="ease-out-cubic">
                 
                     <!-- Quote -->
-                    <blockquote
-                        class="italic text-white/90 font-[var(--font-accent)] text-xl leading-relaxed transform transition duration-700 hover:scale-105">
+                    <blockquote class="italic text-white/80 font-(--font-accent) text-xl px-4 md:px-0 
+                                        leading-relaxed transform transition duration-700 hover:scale-105">
                         “Every pixel we push is a reflection of your ambition. At ByCodeIt, we don’t just build websites — we build
                         trust, momentum, and digital confidence.”
                     </blockquote>
@@ -339,15 +364,15 @@
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 20h14l-1-9-4 3-3-6-3 6-4-3-1 9z" />
                         </svg>
-                        <p class="text-blue-300 font-semibold font-[var(--font-signature)]">
-                            Muhammed, Founder
+                        <p class="text-blue-300 font-semibold font-(--font-signature)">
+                            Founder
                         </p>
                     </div>
                 </div>
 
 
                 <!-- Snapshot Cards -->
-                <div class="grid md:grid-cols-3 gap-8 text-center font-semibold">
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 p-6 md:p-8 text-center font-semibold ">
                 
                     <!-- Founded -->
                     <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow transition transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 duration-300">
@@ -356,8 +381,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        <h5 class="text-lg font-bold mb-1 font-[var(--font-display)]">Founded</h5>
-                        <p class="text-white/80 font-[var(--font-body)]">July 2025</p>
+                        <h5 class="text-lg font-bold mb-1 font-(--font-display)">Founded</h5>
+                        <p class="text-white/80 font-(--font-body)">July 2025</p>
                     </div>
                 
                     <!-- Specialty -->
@@ -366,8 +391,8 @@
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
                         </svg>
-                        <h5 class="text-lg font-bold mb-1 font-[var(--font-display)]">Specialty</h5>
-                        <p class="text-white/80 font-[var(--font-body)]">Frontend & Web Design</p>
+                        <h5 class="text-lg font-bold mb-1 font-(--font-display)">Specialty</h5>
+                        <p class="text-white/80 font-(--font-body)">Frontend & Web Design</p>
                     </div>
                 
                     <!-- Core Audience -->
@@ -377,8 +402,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M17 20h5v-2a4 4 0 00-3-3.87M9 20h6M3 20h5v-2a4 4 0 00-3-3.87M16 7a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
-                        <h5 class="text-lg font-bold mb-1 font-[var(--font-display)]">Core Audience</h5>
-                        <p class="text-white/80 font-[var(--font-body)]">Startups & Growing Businesses</p>
+                        <h5 class="text-lg font-bold mb-1 font-(--font-display)">Core Audience</h5>
+                        <p class="text-white/80 font-(--font-body)">Startups & Growing Businesses</p>
                     </div>
                 
                 </div>
@@ -388,17 +413,16 @@
 
 
         <!-- Services Section -->
-        <section id="services"
-            class="bg-gradient-to-br from-[#1e293b] via-[#0a0f2c] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
+        <section id="services" class="bg-linear-to-br from-[#1e293b] via-[#0a0f2c] to-[#2563eb] text-white px-6 py-24 md:px-12 lg:px-24">
         
             <div class="max-w-7xl mx-auto">
         
                 <!-- Section Header -->
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-[var(--font-display)] tracking-tight">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-(--font-display) tracking-tight">
                         Services
                     </h2>
-                    <p class="text-white/80 text-lg font-medium font-[var(--font-body)]">
+                    <p class="text-white/80 text-lg font-medium font-(--font-body)">
                         Solutions tailored to your business goals — built with precision and creativity.
                     </p>
                 </div>
@@ -407,70 +431,81 @@
                 <div class="grid md:grid-cols-3 gap-12">
 
                     <!-- Front-end Development -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <!-- Use a clean graphic here, not the one with text baked in -->
-                        <img src="./assets/service-img/front-end.webp" alt="Front-end Development" class="w-full h-auto" />
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold mb-2 text-blue-300 font-[var(--font-display)]">Front-end Development</h4>
-                            <p class="text-white/80 font-[var(--font-body)]">
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
+                                hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+
+                        <img src="./assets/service-img/front-end.webp" alt="Front-end Development" class="w-full h-auto rounded-t-xl" />
+
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-xl font-bold mb-2 text-blue-300 font-(--font-display)">Frontend Development</h4>
+                            <p class="text-white/80 font-(--font-body)">
                                 Custom, responsive websites with React, Bootstrap, and Tailwind.
                             </p>
                         </div>
                     </div>
 
                     <!-- Mobile-Friendly Design -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <img src="./assets/service-img/mobile.webp" alt="Mobile-Friendly Design" class="w-full h-auto" />
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold mb-2 text-indigo-300 font-[var(--font-display)]">Mobile-Friendly Design
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
+                                    hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+
+                        <img src="./assets/service-img/mobile.webp" alt="Mobile-Friendly Design" class="w-full h-auto rounded-t-xl" />
+
+                        <div class="p-6 md:p-8">
+
+                            <h4 class="text-xl font-bold mb-2 text-indigo-300 font-(--font-display)">Mobile-Friendly Design
                             </h4>
-                            <p class="text-white/80 font-[var(--font-body)]">Layouts that adapt beautifully to any screen size.
+                            <p class="text-white/80 font-(--font-body)">Layouts that adapt beautifully to any screen size.
                             </p>
                         </div>
                     </div>
         
                     <!-- UI/UX Design -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-                        data-aos="fade-up" data-aos-delay="400">
-                        <img src="./assets/service-img/uiux.webp" alt="UI/UX Design" class="w-full h-auto" />
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold mb-2 text-pink-300 font-[var(--font-display)]">UI/UX Design</h4>
-                            <p class="text-white/80 font-[var(--font-body)]">User-centered interfaces that drive engagement.</p>
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
+                                hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+
+                        <img src="./assets/service-img/uiux.webp" alt="UI/UX Design" class="w-full h-auto rounded-t-xl" />
+
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-xl font-bold mb-2 text-pink-300 font-(--font-display)">UI/UX Design</h4>
+                            <p class="text-white/80 font-(--font-body)">User-centered interfaces that drive engagement.</p>
                         </div>
                     </div>
         
                     <!-- Website Maintenance -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-                        data-aos="fade-up" data-aos-delay="500">
-                        <img src="./assets/service-img/website.webp" alt="Website Maintenance" class="w-full h-auto" />
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold mb-2 text-cyan-300 font-[var(--font-display)]">Website Maintenance</h4>
-                            <p class="text-white/80 font-[var(--font-body)]">Security, updates, and performance monitoring made
-                                simple.</p>
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
+                                    hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="500">
+
+                        <img src="./assets/service-img/website.webp" alt="Website Maintenance" class="w-full h-auto rounded-t-xl" />
+
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-xl font-bold mb-2 text-cyan-300 font-(--font-display)">Website Maintenance</h4>
+                            <p class="text-white/80 font-(--font-body)">Security, updates, and performance monitoring made simple.</p>
                         </div>
                     </div>
         
                     <!-- SEO Optimization -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-                        data-aos="fade-up" data-aos-delay="600">
-                        <img src="./assets/service-img/seo.webp" alt="SEO Optimization" class="w-full h-auto" />
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold mb-2 text-purple-300 font-[var(--font-display)]">SEO Optimization</h4>
-                            <p class="text-white/80 font-[var(--font-body)]">Boost visibility with technical and on-page SEO
-                                strategies.</p>
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
+                                    hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="600">
+
+                        <img src="./assets/service-img/seo.webp" alt="SEO Optimization" class="w-full h-auto rounded-t-xl" />
+
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-xl font-bold mb-2 text-purple-300 font-(--font-display)">SEO Optimization</h4>
+                            <p class="text-white/80 font-(--font-body)">Boost visibility with technical and on-page SEO strategies.</p>
                         </div>
                     </div>
         
                     <!-- Consultation -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-                        data-aos="fade-up" data-aos-delay="700">
-                        <img src="./assets/service-img/consultation.webp" alt="Consultation" class="w-full h-auto" />
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold mb-2 text-blue-300 font-[var(--font-display)]">Consultation</h4>
-                            <p class="text-white/80 font-[var(--font-body)]">Let’s shape your ideas into a custom web strategy
-                                that fits your business goals.</p>
+                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
+                                hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="700">
+
+                        <img src="./assets/service-img/consultation.webp" alt="Consultation" class="w-full h-auto rounded-t-xl" />
+
+                        <div class="p-6 md:p-8">
+                            <h4 class="text-xl font-bold mb-2 text-blue-300 font-(--font-display)">Consultation</h4>
+                            <p class="text-white/80 font-(--font-body)">
+                                Let’s shape your ideas into a custom web strategy that fits your business goals.
+                            </p>
                         </div>
                     </div>
         
@@ -480,18 +515,18 @@
         <!-- End of Services Section -->
 
 
+
         <!-- Portfolio Section -->
-        <section id="portfolio"
-            class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
+        <section id="portfolio" class="bg-linear-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
         
             <div class="max-w-7xl mx-auto">
         
                 <!-- Section Header -->
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-[var(--font-display)] tracking-tight">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-(--font-display) tracking-tight">
                         Portfolio
                     </h2>
-                    <p class="text-white/80 text-lg font-medium font-[var(--font-body)]">
+                    <p class="text-white/80 text-lg font-medium font-(--font-body)">
                         A showcase of work — starting with Raystones Exclusive Apartments.
                     </p>
                 </div>
@@ -500,9 +535,9 @@
                 <div class="grid md:grid-cols-2 gap-12">
         
                     <!-- Raystones Project -->
-                    <div class="relative rounded-xl border border-transparent bg-gradient-to-r 
-                                from-blue-500/30 via-indigo-500/30 to-purple-500/30 bg-clip-border p-[1px]" data-aos="fade-up"
-                        data-aos-delay="200">
+                    <div class="relative rounded-xl border border-transparent 
+                                bg-linear-to-r from-blue-500/20 via-indigo-500/20 to-purple-500/20 bg-clip-border p-px" 
+                                data-aos="fade-up" data-aos-delay="200">
                     
                         <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg 
                                     transition-transform duration-300 ease-out 
@@ -514,14 +549,14 @@
                                 <div class="absolute inset-0 bg-black/60 flex items-center justify-center 
                                             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <a href="https://raystonesapartments.com/" target="_blank"
-                                        class="px-4 py-2 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600">
+                                        class="px-4 py-2 bg-indigo-500 text-white rounded-lg font-semibold hover:bg-indigo-600 transition">
                                         View Project
                                     </a>
                                 </div>
                             </div>
                     
-                            <div class="p-6">
-                                <h4 class="text-xl font-bold mb-2 text-yellow-300 font-[var(--font-display)]">
+                            <div class="p-6 md:p-8 space-y-4">
+                                <h4 class="text-xl font-bold mb-2 text-yellow-300 font-(--font-display)">
                                     Raystones Exclusive Apartments
                                 </h4>
                                 <p class="text-white/80 mb-4">Frontend · UI/UX · Mobile Optimization</p>
@@ -540,9 +575,9 @@
                     
                     
                     <!-- Roheey Cakes Project -->
-                    <div class="relative rounded-xl border border-transparent bg-gradient-to-r 
-                                from-blue-500/30 via-indigo-500/30 to-purple-500/30 bg-clip-border p-[1px]" data-aos="fade-up"
-                        data-aos-delay="300">
+                    <div class="relative rounded-xl border border-transparent 
+                                bg-linear-to-r from-blue-500/20 via-indigo-500/20 to-purple-500/20 bg-clip-border p-px" 
+                                data-aos="fade-up" data-aos-delay="300">
                     
                         <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg 
                                     transition-transform duration-300 ease-out 
@@ -553,14 +588,14 @@
                                 <div class="absolute inset-0 bg-black/60 flex items-center justify-center 
                                         opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <a href="https://roheeycakes.netlify.app/" target="_blank"
-                                        class="px-4 py-2 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600">
+                                        class="px-4 py-2 bg-indigo-500 text-white rounded-lg font-semibold hover:bg-indigo-600 transition">
                                         View Project
                                     </a>
                                 </div>
                             </div>
                     
-                            <div class="p-6">
-                                <h4 class="text-xl font-bold mb-2 text-green-300 font-[var(--font-display)]">
+                            <div class="p-6 md:p-8 space-y-4">
+                                <h4 class="text-xl font-bold mb-2 text-green-300 font-(--font-display)">
                                     Roheey Cakes & Cream
                                 </h4>
                                 <p class="text-white/80 mb-4">Frontend · UI/UX · Performance</p>
@@ -581,46 +616,47 @@
             </div>
         
             <!-- Showcase, Coming Soon, Collaboration Grid -->
-            <div class="max-w-full mx-auto mt-12 py-6">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-                    <!-- Startup Showcase -->
-                    <div class="relative bg-white/10 rounded-xl flex items-center justify-center h-64 shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl p-4 text-center overflow-hidden"
-                        data-aos="fade-up" data-aos-delay="400">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-purple-500/10">
-                        </div>
-                        <div class="relative text-center">
-                            <i class="bi bi-rocket text-4xl text-blue-300 mb-2"></i>
-                            <h4 class="text-xl font-bold text-white">Startup Showcase</h4>
-                            <p class="text-white/70">Helping new businesses launch with confidence.</p>
-                        </div>
+            <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+                <!-- Startup Showcase -->
+                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64 
+                            shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="absolute inset-0 bg-linear-to-br from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-xl">
                     </div>
-        
-                    <!-- Coming Soon -->
-                    <div class="relative bg-white/10 rounded-xl flex items-center justify-center h-64 shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl p-4 text-center overflow-hidden"
-                        data-aos="fade-up" data-aos-delay="500">
-                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-blue-500/10">
-                        </div>
-                        <div class="relative text-center">
-                            <i class="bi bi-hourglass-split text-4xl text-indigo-300 mb-2"></i>
-                            <h4 class="text-xl font-bold text-white">Next Project</h4>
-                            <p class="text-white/70">Coming soon — something exciting is in the works.</p>
-                        </div>
+                    <div class="relative text-center space-y-4">
+                        <i class="bi bi-rocket text-4xl text-blue-300"></i>
+                        <h4 class="text-xl font-bold font-(--font-display)">Startup Showcase</h4>
+                        <p class="text-white/70 font-(--font-body)">Helping new businesses launch with confidence.</p>
                     </div>
-        
-                    <!-- Collaboration -->
-                    <div class="relative bg-white/10 rounded-xl flex items-center justify-center h-64 shadow-lg transition-transform duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl p-4 text-center overflow-hidden"
-                        data-aos="fade-up" data-aos-delay="600">
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-indigo-500/10">
-                        </div>
-                        <div class="relative text-center">
-                            <i class="bi bi-chat-dots text-4xl text-purple-300 mb-2"></i>
-                            <h4 class="text-xl font-bold text-white">Open for Collaboration</h4>
-                            <p class="text-white/70">Let’s build something amazing together. Reach out and let’s turn your
-                                vision into reality.</p>
-                        </div>
+                </div>
+            
+                <!-- Coming Soon -->
+                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64 
+                            shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="absolute inset-0 bg-linear-to-br from-indigo-500/10 via-purple-500/10 to-blue-500/10 rounded-xl">
                     </div>
-        
+                    <div class="relative text-center space-y-4">
+                        <i class="bi bi-hourglass-split text-4xl text-indigo-300"></i>
+                        <h4 class="text-xl font-bold font-(--font-display)">Next Project</h4>
+                        <p class="text-white/70 font-(--font-body)">Coming soon — something exciting is in the works.</p>
+                    </div>
+                </div>
+            
+                <!-- Collaboration -->
+                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64 
+                            shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div class="absolute inset-0 bg-linear-to-br from-purple-500/10 via-blue-500/10 to-indigo-500/10 rounded-xl">
+                    </div>
+                    <div class="relative text-center space-y-4">
+                        <i class="bi bi-chat-dots text-4xl text-purple-300"></i>
+                        <h4 class="text-xl font-bold font-(--font-display)">Open for Collaboration</h4>
+                        <p class="text-white/70 font-(--font-body)">
+                            Let’s build something amazing together. Reach out and let’s turn your vision into reality.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -629,8 +665,7 @@
 
 
         <!-- Testimonials Section -->
-        <section id="testimonials"
-            class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white px-6 py-24 md:px-12 lg:px-24">
+        <section id="testimonials" class="bg-linear-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white px-6 py-28 md:px-16 lg:px-24">
         
             <div class="max-w-7xl mx-auto">
         
@@ -648,51 +683,64 @@
                 <div class="grid md:grid-cols-3 gap-8">
         
                     <!-- Testimonial 1 -->
-                    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-8 flex flex-col justify-between 
-                                transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between 
+                                transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)]"
+                            data-aos="fade-up">
+
                         <p class="text-white/90 italic mb-6">
                             "ByCodeIt transformed our online presence with a sleek, responsive site. Our engagement doubled
                             within weeks."
                         </p>
+
+                        <div class="w-16 h-[2px] bg-linear-to-r from-blue-400 to-indigo-500 mb-6"></div>
+
                         <div class="flex items-center gap-4">
                             <img src="./assets/clients-img/client1.png" alt="Client 1"
                                 class="w-12 h-12 rounded-full object-cover">
                             <div>
-                                <h4 class="font-bold text-white">Mr. Yemi Adebanjo</h4>
+                                <h4 class="font-semibold text-white tracking-wide">Mr. Yemi Adebanjo</h4>
                                 <p class="text-white/70 text-sm">Founder, Raystones Apartments</p>
                             </div>
                         </div>
                     </div>
         
                     <!-- Testimonial 2 -->
-                    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-8 flex flex-col justify-between 
-                                transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up"
-                        data-aos-delay="100">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between 
+                                transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)]"
+                            data-aos="fade-up">
+
                         <p class="text-white/90 italic mb-6">
                             "His attention to detail and design sense is unmatched. The project exceeded our expectations."
                         </p>
+
+                        <div class="w-16 h-[2px] bg-linear-to-r from-blue-400 to-indigo-500 mb-6"></div>
+
                         <div class="flex items-center gap-4">
                             <img src="./assets/clients-img/client2.png" alt="Client 2"
                                 class="w-12 h-12 rounded-full object-cover">
                             <div>
-                                <h4 class="font-bold text-white">Regina Latoye</h4>
+                                <h4 class="font-semibold text-white tracking-wide">Regina Latoye</h4>
                                 <p class="text-white/70 text-sm">CEO, Startup Hub</p>
                             </div>
                         </div>
                     </div>
         
                     <!-- Testimonial 3 -->
-                    <div class="bg-white/10 backdrop-blur-md rounded-xl shadow-xl p-8 flex flex-col justify-between 
-                                transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up"
-                        data-aos-delay="200">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between 
+                                transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)]"
+                            data-aos="fade-up">
+
                         <p class="text-white/90 italic mb-6">
                             "Working with ByCodeIt was seamless. He delivered on time and brought fresh ideas to the table."
                         </p>
+
+                        <div class="w-16 h-[2px] bg-linear-to-r from-blue-400 to-indigo-500 mb-6"></div>
+
                         <div class="flex items-center gap-4">
                             <img src="./assets/clients-img/client3.png" alt="Client 3"
                                 class="w-12 h-12 rounded-full object-cover">
                             <div>
-                                <h4 class="font-bold text-white">Aisha Bello</h4>
+                                <h4 class="font-semibold text-white tracking-wide">Aisha Bello</h4>
                                 <p class="text-white/70 text-sm">Roheey Cakes Management</p>
                             </div>
                         </div>
@@ -706,32 +754,36 @@
 
 
         <!-- Project Counter -->
-        <section id="stats" class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white py-20">
+        <section id="stats" class="bg-linear-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] text-white py-20">
             <div class="container mx-auto px-6 text-center">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
         
                     <!-- Counter 1 -->
-                    <div class="transition-transform hover:scale-105">
-                        <h2 class="counter text-5xl font-extrabold mb-2" data-target="5">0</h2>
-                        <p class="text-lg font-medium text-white/80">Projects Completed</p>
+                    <div class="transition-transform duration-500 hover:scale-110">
+                        <h2 class="counter text-6xl font-[var(--font-display)] font-extrabold mb-3 tracking-tight"
+                            data-target="5">0</h2>
+                        <p class="text-base md:text-lg font-[var(--font-body)] text-white/80">Projects Completed</p>
                     </div>
         
                     <!-- Counter 2 -->
-                    <div class="transition-transform hover:scale-105">
-                        <h2 class="counter text-5xl font-extrabold mb-2" data-target="20">0</h2>
-                        <p class="text-lg font-medium text-white/80">Happy Clients</p>
+                    <div class="transition-transform duration-500 hover:scale-110">
+                        <h2 class="counter text-6xl font-[var(--font-display)] font-extrabold mb-3 tracking-tight"
+                            data-target="20">0</h2>
+                        <p class="text-base md:text-lg font-[var(--font-body)] text-white/80">Happy Clients</p>
                     </div>
         
                     <!-- Counter 3 -->
-                    <div class="transition-transform hover:scale-105">
-                        <h2 class="counter text-5xl font-extrabold mb-2" data-target="5">0</h2>
-                        <p class="text-lg font-medium text-white/80">Years in Business</p>
+                    <div class="transition-transform duration-500 hover:scale-110">
+                        <h2 class="counter text-6xl font-[var(--font-display)] font-extrabold mb-3 tracking-tight"
+                            data-target="5">0</h2>
+                        <p class="text-base md:text-lg font-[var(--font-body)] text-white/80">Years in Business</p>
                     </div>
         
                     <!-- Counter 4 -->
-                    <div class="transition-transform hover:scale-105">
-                        <h2 class="counter text-5xl font-extrabold mb-2" data-target="100">0</h2>
-                        <p class="text-lg font-medium text-white/80">Cups of Coffee</p>
+                    <div class="transition-transform duration-500 hover:scale-110">
+                        <h2 class="counter text-6xl font-[var(--font-display)] font-extrabold mb-3 tracking-tight"
+                            data-target="100">0</h2>
+                        <p class="text-base md:text-lg font-[var(--font-body)] text-white/80">Cups of Coffee</p>
                     </div>
         
                 </div>
@@ -740,27 +792,32 @@
         <!-- End of Project Counter -->
 
 
+
         <!-- Contact Section -->
-        <section id="connect" class="bg-gradient-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] py-24 text-white">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <section id="connect" class="bg-linear-to-br from-[#0a0f2c] via-[#1e293b] to-[#3b82f6] py-24 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
         
                     <!-- Contact Form -->
-                    <div>
-                        <h6 class="text-3xl font-extrabold tracking-wide mb-4" data-aos="fade-up">Let’s Connect</h6>
-                        <p class="text-white/80 mb-8 leading-relaxed max-w-lg" data-aos="fade-up">
+                    <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
+                        <h6 class="text-3xl font-extrabold tracking-wide mb-4">Let’s Connect</h6>
+                        <p class="text-white/80 mb-8 leading-relaxed max-w-lg">
                             Whether you have a project in mind or just a question — I’d love to hear from you.
                         </p>
         
-                        <form action="#" method="post" class="space-y-6" data-aos="fade-up">
+                        <form action="#" method="post" class="space-y-8">
                             <div class="grid md:grid-cols-2 gap-6">
+        
                                 <!-- Name -->
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-white mb-1">
                                         Name <sup class="text-red-400">*</sup>
                                     </label>
-                                    <input type="text" id="name" name="name" required placeholder="Full name"
-                                        class="w-full rounded-lg border border-white/20 bg-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 transition duration-300 outline-none hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
+                                    <input type="text" id="name" name="name" required placeholder="Full name" 
+                                            class="w-full rounded-lg border border-white/20 bg-white/10 
+                                            focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 
+                                            text-white placeholder-gray-300 transition duration-300 outline-none 
+                                            hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
                                 </div>
         
                                 <!-- Email -->
@@ -768,8 +825,11 @@
                                     <label for="email" class="block text-sm font-medium text-white mb-1">
                                         Email <sup class="text-red-400">*</sup>
                                     </label>
-                                    <input type="email" id="email" name="email" required placeholder="Email address"
-                                        class="w-full rounded-lg border border-white/20 bg-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 transition duration-300 outline-none hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
+                                    <input type="email" id="email" name="email" required placeholder="Email address" 
+                                            class="w-full rounded-lg border border-white/20 bg-white/10 
+                                            focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 
+                                            text-white placeholder-gray-300 transition duration-300 outline-none 
+                                            hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
                                 </div>
                             </div>
         
@@ -779,29 +839,40 @@
                                     Message <sup class="text-red-400">*</sup>
                                 </label>
                                 <textarea id="message" name="message" rows="3" required
-                                    placeholder="Share your idea or request…"
-                                    class="w-full rounded-lg border border-white/20 bg-white/10 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 transition duration-300 outline-none hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"></textarea>
+                                    placeholder="Share your idea or request…" class="w-full rounded-lg border border-white/20 
+                                            bg-white/10 focus:border-blue-400 focus:ring-2 
+                                            focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 transition duration-300 
+                                            outline-none hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                                </textarea>
                             </div>
         
-                            <button type="submit"
-                                class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold 
+                                                            py-3 px-6 rounded-lg transition duration-300 shadow-md 
+                                                            hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] hover:-translate-y-1">
                                 Send Message
                             </button>
                         </form>
                     </div>
         
                     <!-- Contact Info Card -->
-                    <div data-aos="fade-up"
-                        class="bg-white/10 backdrop-blur-md shadow-lg border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition duration-300">
+                    <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000" 
+                                        class="bg-white/10 backdrop-blur-md shadow-lg border 
+                                            border-white/20 rounded-2xl p-10 flex flex-col items-center 
+                                            text-center hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition duration-300 
+                                            hover:-translate-y-1">
+        
                         <h5 class="text-xl font-semibold mb-3">Prefer Direct Contact?</h5>
                         <p class="text-white/80 mb-6 max-w-md">
                             Reach out instantly via WhatsApp or Email — I usually reply within minutes during working hours.
                         </p>
         
                         <div class="flex flex-col md:flex-row gap-4">
+        
                             <!-- WhatsApp -->
-                            <a href="https://bit.ly/bycodeitsolutions" target="_blank"
-                                class="flex items-center justify-center border border-blue-400 text-blue-300 hover:bg-blue-500 hover:text-white font-medium rounded-lg px-6 py-3 transition duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]">
+                            <a href="https://bit.ly/bycodeitsolutions" target="_blank" 
+                                                        class="flex items-center justify-center border border-blue-400 text-blue-300 
+                                                        hover:bg-blue-500 hover:text-white font-medium rounded-lg px-6 py-3 
+                                                        transition duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.7)]">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="currentColor"
                                     viewBox="0 0 16 16">
                                     <path
@@ -813,10 +884,12 @@
                             </a>
         
                             <!-- Email -->
-                            <a href="mailto:contact@bycodeit.dev?subject=Project%20Inquiry&body=Hi%20ByCODEIT%2C%20I%20have%20an%20idea..." class="flex items-center justify-center border border-blue-400 text-blue-300 
-                                    hover:bg-blue-500 hover:text-white font-medium rounded-lg px-6 py-3 
-                                    transition duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.7)] hover:-translate-y-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mr-2">
+                            <a href="mailto:contact@bycodeit.dev?subject=Project%20Inquiry&body=Hi%20ByCODEIT%2C%20I%20have%20an%20idea..."
+                                class="flex items-center justify-center border border-blue-400 text-blue-300 
+                            hover:bg-blue-500 hover:text-white font-medium rounded-lg px-6 py-3 
+                            transition duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.7)] hover:-translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                    class="w-5 h-5 mr-2">
                                     <path d="M2 4a2 2 0 0 1 2-2h16a2 
                                             2 0 0 1 2 2v16a2 2 0 0 1-2 
                                             2H4a2 2 0 0 1-2-2V4zm2 0v.01L12 
@@ -826,7 +899,6 @@
                                 </svg>
                                 Email
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -834,32 +906,34 @@
         </section>
         <!-- End of Contact Section -->
 
+
     </main>
 
     
-
     
     <!-- Footer Section -->
-    <footer class="relative bg-[#0a0f2c] text-gray-400 py-20 px-6 md:px-12 overflow-hidden font-[var(--font-body)]">
+    <footer data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"
+        class="relative bg-[#0a0f2c] text-gray-400 py-20 px-6 md:px-12 overflow-hidden font-[var(--font-body)]">
+    
         <!-- Subtle animated background glow -->
         <div
             class="absolute inset-0 bg-gradient-to-tr from-indigo-700/10 via-cyan-500/5 to-fuchsia-600/10 animate-pulse pointer-events-none">
         </div>
     
-        <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-14">
+        <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20">
     
             <!-- Brand Section -->
             <div>
                 <h2 class="text-3xl font-bold text-white mb-4 tracking-tight font-[var(--font-display)]">
                     ByCodeIt <span class="text-indigo-400">Solutions</span>
                 </h2>
-                <p class="text-gray-300 leading-relaxed max-w-sm">
+                <p class="text-gray-300/90 leading-relaxed max-w-sm">
                     We code your vision — transforming ideas into beautiful, scalable digital experiences for modern brands.
                 </p>
     
                 <!-- Social Icons -->
                 <div class="flex space-x-5 mt-6">
-
+    
                     <!-- WhatsApp -->
                     <a href="https://wa.me/2349024986943" target="_blank"
                         class="text-gray-400 hover:text-green-500 transition transform hover:scale-110 hover:drop-shadow-[0_0_12px_#3b82f6]">
@@ -904,52 +978,56 @@
             <div>
                 <h3 class="text-white text-xl font-semibold mb-5 font-[var(--font-display)]">Explore</h3>
                 <ul class="space-y-3">
-                    <li><a href="#about" class="hover:text-indigo-400 transition-colors duration-300">About</a></li>
-                    <li><a href="#services" class="hover:text-indigo-400 transition-colors duration-300">Services</a></li>
-                    <li><a href="#portfolio" class="hover:text-indigo-400 transition-colors duration-300">Portfolio</a></li>
-                    <li><a href="#connect" class="hover:text-indigo-400 transition-colors duration-300">Contact</a></li>
+                    <li><a href="#about"
+                            class="hover:text-indigo-400 hover:translate-x-1 transition-all duration-300 inline-block">About</a>
+                    </li>
+                    <li><a href="#services"
+                            class="hover:text-indigo-400 hover:translate-x-1 transition-all duration-300 inline-block">Services</a>
+                    </li>
+                    <li><a href="#portfolio"
+                            class="hover:text-indigo-400 hover:translate-x-1 transition-all duration-300 inline-block">Portfolio</a>
+                    </li>
+                    <li><a href="#connect"
+                            class="hover:text-indigo-400 hover:translate-x-1 transition-all duration-300 inline-block">Contact</a>
+                    </li>
                 </ul>
             </div>
-            
+    
             <!-- Contact Section -->
             <div>
                 <h3 class="text-white text-xl font-semibold mb-5 font-[var(--font-display)]">Let’s Build Together</h3>
-                <p class="text-gray-300 mb-6"> Have a project idea or need expert frontend support? Let’s collaborate. </p>
-
+                <p class="text-gray-300/90 mb-6">Have a project idea or need expert frontend support? Let’s collaborate.</p>
+    
                 <a href="mailto:contact@bycodeit.dev" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg 
-                                                                bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium 
-                                                                hover:from-blue-500 hover:to-indigo-500 transition shadow-lg 
-                                                                hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
-                
-                    <!-- Envelope Icon -->
+                    bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium 
+                    hover:from-blue-500 hover:to-indigo-500 transition shadow-lg 
+                    hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V4z" />
                         <path
                             d="M0 6.383v5.634L5.803 8.482 0 6.383zM6.761 9.07l-6.76 3.57A2 2 0 0 0 2 14h12a2 2 0 0 0 1.999-1.36l-6.76-3.57L8 10.583l-1.239-.513zM10.197 8.482 16 12.017V6.383l-5.803 2.099z" />
                     </svg>
-                
                     contact@bycodeit.dev
                 </a>
-
+    
                 <p class="text-gray-500 mt-4 text-sm">Based in Ogun, Nigeria · Available Mon–Sat</p>
             </div>
-            </div>
-            
-            <!-- Bottom Divider -->
-            <div
-                class="relative max-w-7xl mx-auto mt-16 border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 text-center md:text-left gap-3">
-                <p>© 2025 ByCodeIt Solutions. All Rights Reserved.</p>
-                <p>
-                    Designed & coded with ❤️ <span class="text-indigo-400 font-medium">ByCodeIt</span>
-                </p>
+        </div>
+    
+        <!-- Bottom Divider -->
+        <div class="relative max-w-7xl mx-auto mt-20 border-t border-gray-800/80 pt-8 flex flex-col 
+            md:flex-row items-center justify-between text-sm text-gray-500 text-center md:text-left gap-4">
+            <p>© 2025 ByCodeIt Solutions. All Rights Reserved.</p>
+            <p>Designed & coded with ❤️ by <span class="text-indigo-400 font-medium">ByCodeIt</span></p>
         </div>
     </footer>
     <!-- End of Footer Section -->
 
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <!-- JAVASCRIPT FILE -->
     <script src="./src/app.js"></script>
 
 </body>
-
 </html>
