@@ -86,130 +86,87 @@
             Skip to content
         </a>
 
-        <!-- Navigation Section -->
-        <nav id="navbar" aria-label="Main navigation" class="fixed top-0 left-0 w-full bg-[#0a0f2c]/90 
-                                        backdrop-blur-md shadow-md z-50 transition duration-300">
-
-            <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-20 flex items-center justify-between py-4 md:py-5 lg:py-6 relative">
         
+        <!-- Navigation Section -->
+        <nav id="navbar" aria-label="Main navigation" class="fixed top-0 left-0 w-full opacity-0 -translate-y-5 transition-all duration-700 ease-out
+                                                            bg-[#0a0f2c]/80 backdrop-blur-lg supports-backdrop-filter:backdrop-blur-xl
+                                                            border-b border-white/10 shadow-[0_2px_20px_rgba(0,0,0,0.3)] z-50">
+        
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20 flex items-center justify-between py-4 md:py-5 relative">
         
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 pr-2 sm:pr-4 
-                                            focus-visible:ring-2 focus-visible:ring-blue-400 
-                                            focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0f2c] 
-                                            rounded-lg transition">
-                
-                    <img src="./assets/logo-img/ByCodeIt.png" alt="ByCodeIt Logo" class="h-7 w-auto sm:h-8 lg:h-9" />
-                
-                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight font-(--font-display) whitespace-nowrap">
-                        ByCodeIt <span class="text-blue-400">Solutions</span>
+                <a href="index.html" class="flex items-center gap-2 sm:gap-3 pr-2 sm:pr-4 group focus-visible:ring-2 focus-visible:ring-blue-400
+                                            focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0f2c] rounded-lg transition">
+            
+                    <img src="./assets/logo-img/ByCodeIt.png" alt="ByCodeIt Logo"
+                        class="h-7 w-auto sm:h-8 lg:h-9 group-hover:scale-105 transition-transform duration-300" />
+                    <h2
+                        class="text-2xl sm:text-3xl font-bold text-white tracking-tight font-(--font-display) whitespace-nowrap transition-colors duration-300 group-hover:text-blue-300">
+                        ByCodeIt <span class="text-blue-400 group-hover:text-blue-300">Solutions</span>
                     </h2>
                 </a>
-
-
-                <!-- Mobile Toggle Button -->
-                <button id="menuToggle" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
-                    aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" onclick="openMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        
+                <!-- Mobile Toggle -->
+                <button id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"
+                    onclick="openMenu()"
+                    class="md:hidden text-white hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
         
-                <!-- Desktop Navigation Links + CTA -->
-                <div class="hidden md:flex items-center space-x-10 text-sm text-white font-(--font-display)">
-        
-                    <!-- Navigation Links -->
-                    <div id="navbarNav" class="flex items-center space-x-8">
-
-                        <a href="#hero" class="relative transition duration-300 hover:text-blue-400 
-                                                focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
-                                                hover:after:w-full after:absolute after:bottom-0 after:left-0 
-                                                after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
-                            Home
-                        </a>
-                        <a href="#about" class="relative transition duration-300 hover:text-blue-400 focus:outline-none 
-                                                focus:ring-2 focus:ring-blue-400 rounded
-                                                hover:after:w-full after:absolute after:bottom-0 after:left-0 
-                                                after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
-                            The Brand
-                        </a>
-                        <a href="#services" class="relative transition duration-300 hover:text-blue-400 
-                                                    focus:outline-none focus:ring-2 focus:ring-blue-400 rounded
-                                                    hover:after:w-full after:absolute after:bottom-0 after:left-0 after:h-[2px] 
-                                                    after:w-0 after:bg-blue-400 after:transition-all after:duration-300">
-                            Services
-                        </a>
-                        <a href="#portfolio" class="relative transition duration-300 hover:text-blue-400 focus:outline-none 
-                                                    focus:ring-2 focus:ring-blue-400 rounded
-                                                    hover:after:w-full after:absolute after:bottom-0 
-                                                    after:left-0 after:h-[2px] after:w-0 after:bg-blue-400 after:transition-all 
-                                                    after:duration-300">
-                            Portfolio
-                        </a>
-                        <a href="#connect" class="relative transition duration-300 hover:text-blue-400 focus:outline-none 
-                                                    focus:ring-2 focus:ring-blue-400 rounded hover:after:w-full 
-                                                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 
-                                                    after:bg-blue-400 after:transition-all after:duration-300">
-                            Connect
-                        </a>
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center gap-10 text-sm text-white font-(--font-display)">
+                    <div id="navbarNav" class="relative flex items-center gap-8">
+                        <a href="#hero" class="nav-link">Home</a>
+                        <a href="#about" class="nav-link">The Brand</a>
+                        <a href="#services" class="nav-link">Services</a>
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                        <a href="#connect" class="nav-link">Connect</a>
+                        <span class="nav-active-indicator"></span>
                     </div>
         
-                    <!-- CTA Button -->
-                    <a href="#connect" class="inline-flex items-center gap-2 px-5 py-2 rounded-lg 
-                                                bg-linear-to-r from-blue-600 to-indigo-600 
-                                                text-white font-medium hover:from-blue-500 
-                                                hover:to-indigo-500 hover:scale-[1.03] transition shadow-lg 
-                                                hover:shadow-[0_0_20px_rgba(59,130,246,0.6)] focus:outline-none 
-                                                focus:ring-2 focus:ring-blue-400">
+                    <!-- CTA -->
+                    <a href="#connect" class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-linear-to-r from-blue-600 to-indigo-600
+                                            text-white font-medium hover:from-blue-500 hover:to-indigo-500 hover:scale-[1.04]
+                                            transition-all duration-300 shadow-md hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]
+                                            focus:outline-none focus:ring-2 focus:ring-blue-400">
                         Hire Me
                     </a>
                 </div>
             </div>
         </nav>
-
-
-        <!-- Backdrop Overlay -->
-        <div id="menuBackdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden md:hidden" onclick="closeMenu()">
-        </div>
+        
+        <!-- Backdrop -->
+        <div id="menuBackdrop"
+            class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-500"
+            onclick="closeMenu()"></div>
         
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="fixed top-0 right-0 w-64 h-full bg-[#0a0f2c] z-50 text-white font-(--font-display) 
-                                    shadow-[0_0_25px_rgba(0,0,0,0.5)] transform translate-x-full 
-                                    transition-transform duration-300 md:hidden"
-                                    role="dialog" aria-modal="true" aria-label="Mobile menu">
+        <div id="mobileMenu" class="fixed top-0 left-0 w-72 max-w-[85%] h-full bg-[#0a0f2c] z-50 text-white font-(--font-display)
+                                    shadow-[4px_0_25px_rgba(0,0,0,0.5)] transform -translate-x-full
+                                    transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] md:hidden" role="dialog"
+            aria-modal="true" aria-label="Mobile menu">
         
             <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
-
                 <h3 class="text-lg font-semibold">Menu</h3>
-
-                <button aria-label="Close menu" onclick="closeMenu()" class="focus:outline-none focus:ring-2 
-                                                                            focus:ring-blue-400 rounded hover:rotate-90 transition-transform 
-                                                                            duration-300">
-
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <button aria-label="Close menu" onclick="closeMenu()"
+                    class="focus:outline-none focus:ring-2 focus:ring-blue-400 rounded hover:rotate-90 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
         
-            <ul class="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
-                <li><a href="#hero" onclick="closeMenu()"
-                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Home</a>
-                </li>
-                <li><a href="#about" onclick="closeMenu()"
-                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">The
-                        Brand</a></li>
-                <li><a href="#services" onclick="closeMenu()"
-                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Services</a>
-                </li>
-                <li><a href="#portfolio" onclick="closeMenu()"
-                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Portfolio</a>
-                </li>
-                <li><a href="#connect" onclick="closeMenu()"
-                        class="hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded">Connect</a>
-                </li>
+            <ul class="flex flex-col px-6 py-6 space-y-5 text-base font-medium">
+                <li><a href="#hero" onclick="closeMenu()" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()" class="hover:text-blue-400 transition">The Brand</a></li>
+                <li><a href="#services" onclick="closeMenu()" class="hover:text-blue-400 transition">Services</a></li>
+                <li><a href="#portfolio" onclick="closeMenu()" class="hover:text-blue-400 transition">Portfolio</a></li>
+                <li><a href="#connect" onclick="closeMenu()" class="hover:text-blue-400 transition">Connect</a></li>
             </ul>
         </div>
+        
         <!-- End of Navigation Section -->
 
 
@@ -431,8 +388,7 @@
                 <div class="grid md:grid-cols-3 gap-12">
 
                     <!-- Front-end Development -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
-                                hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card bg-white/10 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
 
                         <img src="./assets/service-img/front-end.webp" alt="Front-end Development" class="w-full h-auto rounded-t-xl" />
 
@@ -445,8 +401,7 @@
                     </div>
 
                     <!-- Mobile-Friendly Design -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
-                                    hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card bg-white/10 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
 
                         <img src="./assets/service-img/mobile.webp" alt="Mobile-Friendly Design" class="w-full h-auto rounded-t-xl" />
 
@@ -460,8 +415,7 @@
                     </div>
         
                     <!-- UI/UX Design -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
-                                hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card bg-white/10 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
 
                         <img src="./assets/service-img/uiux.webp" alt="UI/UX Design" class="w-full h-auto rounded-t-xl" />
 
@@ -472,8 +426,7 @@
                     </div>
         
                     <!-- Website Maintenance -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
-                                    hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card bg-white/10 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
 
                         <img src="./assets/service-img/website.webp" alt="Website Maintenance" class="w-full h-auto rounded-t-xl" />
 
@@ -484,8 +437,7 @@
                     </div>
         
                     <!-- SEO Optimization -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
-                                    hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card bg-white/10 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
 
                         <img src="./assets/service-img/seo.webp" alt="SEO Optimization" class="w-full h-auto rounded-t-xl" />
 
@@ -496,8 +448,7 @@
                     </div>
         
                     <!-- Consultation -->
-                    <div class="bg-white/10 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ease-out 
-                                hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-card bg-white/10 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="700">
 
                         <img src="./assets/service-img/consultation.webp" alt="Consultation" class="w-full h-auto rounded-t-xl" />
 
@@ -619,9 +570,7 @@
             <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             
                 <!-- Startup Showcase -->
-                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64 
-                            shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20"
-                    data-aos="fade-up" data-aos-delay="400">
+                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64" data-aos="fade-up" data-aos-delay="400">
                     <div class="absolute inset-0 bg-linear-to-br from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-xl">
                     </div>
                     <div class="relative text-center space-y-4">
@@ -632,9 +581,7 @@
                 </div>
             
                 <!-- Coming Soon -->
-                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64 
-                            shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20"
-                    data-aos="fade-up" data-aos-delay="500">
+                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64" data-aos="fade-up" data-aos-delay="500">
                     <div class="absolute inset-0 bg-linear-to-br from-indigo-500/10 via-purple-500/10 to-blue-500/10 rounded-xl">
                     </div>
                     <div class="relative text-center space-y-4">
@@ -645,9 +592,7 @@
                 </div>
             
                 <!-- Collaboration -->
-                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64 
-                            shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20"
-                    data-aos="fade-up" data-aos-delay="600">
+                <div class="relative bg-white/10 rounded-xl p-6 flex flex-col items-center justify-center text-center h-64" data-aos="fade-up" data-aos-delay="600">
                     <div class="absolute inset-0 bg-linear-to-br from-purple-500/10 via-blue-500/10 to-indigo-500/10 rounded-xl">
                     </div>
                     <div class="relative text-center space-y-4">
@@ -671,10 +616,10 @@
         
                 <!-- Section Header -->
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-[var(--font-display)] tracking-tight">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 font-(--font-display) tracking-tight">
                         Testimonials
                     </h2>
-                    <p class="text-white/80 text-lg font-medium font-[var(--font-body)]">
+                    <p class="text-white/80 text-lg font-medium font-(--font-body)">
                         Hear from people I’ve worked with and the impact we created together.
                     </p>
                 </div>
@@ -683,9 +628,7 @@
                 <div class="grid md:grid-cols-3 gap-8">
         
                     <!-- Testimonial 1 -->
-                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between 
-                                transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)]"
-                            data-aos="fade-up">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between data-aos="fade-up">
 
                         <p class="text-white/90 italic mb-6">
                             "ByCodeIt transformed our online presence with a sleek, responsive site. Our engagement doubled
@@ -705,9 +648,7 @@
                     </div>
         
                     <!-- Testimonial 2 -->
-                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between 
-                                transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)]"
-                            data-aos="fade-up">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between data-aos="fade-up">
 
                         <p class="text-white/90 italic mb-6">
                             "His attention to detail and design sense is unmatched. The project exceeded our expectations."
@@ -726,9 +667,7 @@
                     </div>
         
                     <!-- Testimonial 3 -->
-                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between 
-                                transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(59,130,246,0.3)]"
-                            data-aos="fade-up">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between" data-aos="fade-up">
 
                         <p class="text-white/90 italic mb-6">
                             "Working with ByCodeIt was seamless. He delivered on time and brought fresh ideas to the table."
@@ -760,30 +699,30 @@
         
                     <!-- Counter 1 -->
                     <div class="transition-transform duration-500 hover:scale-110">
-                        <h2 class="counter text-6xl font-[var(--font-display)] font-extrabold mb-3 tracking-tight"
-                            data-target="5">0</h2>
-                        <p class="text-base md:text-lg font-[var(--font-body)] text-white/80">Projects Completed</p>
+                        <h2 class="counter text-6xl font-(--font-display) font-extrabold mb-3 tracking-tight"
+                            data-target="4">0</h2>
+                        <p class="text-base md:text-lg font-(--font-body) text-white/80">Projects Completed</p>
                     </div>
         
                     <!-- Counter 2 -->
                     <div class="transition-transform duration-500 hover:scale-110">
-                        <h2 class="counter text-6xl font-[var(--font-display)] font-extrabold mb-3 tracking-tight"
-                            data-target="20">0</h2>
-                        <p class="text-base md:text-lg font-[var(--font-body)] text-white/80">Happy Clients</p>
+                        <h2 class="counter text-6xl font-(--font-display) font-extrabold mb-3 tracking-tight"
+                            data-target="10">0</h2>
+                        <p class="text-base md:text-lg font-(--font-body) text-white/80">Happy Clients</p>
                     </div>
         
                     <!-- Counter 3 -->
                     <div class="transition-transform duration-500 hover:scale-110">
-                        <h2 class="counter text-6xl font-[var(--font-display)] font-extrabold mb-3 tracking-tight"
+                        <h2 class="counter text-6xl font-(--font-display) font-extrabold mb-3 tracking-tight"
                             data-target="5">0</h2>
-                        <p class="text-base md:text-lg font-[var(--font-body)] text-white/80">Years in Business</p>
+                        <p class="text-base md:text-lg font-(--font-body) text-white/80">Months in Business</p>
                     </div>
         
                     <!-- Counter 4 -->
                     <div class="transition-transform duration-500 hover:scale-110">
-                        <h2 class="counter text-6xl font-[var(--font-display)] font-extrabold mb-3 tracking-tight"
-                            data-target="100">0</h2>
-                        <p class="text-base md:text-lg font-[var(--font-body)] text-white/80">Cups of Coffee</p>
+                        <h2 class="counter text-6xl font-(--font-display) font-extrabold mb-3 tracking-tight"
+                            data-target="30">0</h2>
+                        <p class="text-base md:text-lg font-(--font-body) text-white/80">Cups of Coffee</p>
                     </div>
         
                 </div>
@@ -858,8 +797,7 @@
                     <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000" 
                                         class="bg-white/10 backdrop-blur-md shadow-lg border 
                                             border-white/20 rounded-2xl p-10 flex flex-col items-center 
-                                            text-center hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition duration-300 
-                                            hover:-translate-y-1">
+                                            text-center hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
         
                         <h5 class="text-xl font-semibold mb-3">Prefer Direct Contact?</h5>
                         <p class="text-white/80 mb-6 max-w-md">
@@ -906,25 +844,24 @@
         </section>
         <!-- End of Contact Section -->
 
-
     </main>
 
     
     
     <!-- Footer Section -->
     <footer data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"
-        class="relative bg-[#0a0f2c] text-gray-400 py-20 px-6 md:px-12 overflow-hidden font-[var(--font-body)]">
+        class="relative bg-[#0a0f2c] text-gray-400 py-20 px-6 md:px-12 overflow-hidden font-(--font-body)">
     
         <!-- Subtle animated background glow -->
         <div
-            class="absolute inset-0 bg-gradient-to-tr from-indigo-700/10 via-cyan-500/5 to-fuchsia-600/10 animate-pulse pointer-events-none">
+            class="absolute inset-0 bg-linear-to-tr from-indigo-700/10 via-cyan-500/5 to-fuchsia-600/10 animate-pulse pointer-events-none">
         </div>
     
         <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20">
     
             <!-- Brand Section -->
             <div>
-                <h2 class="text-3xl font-bold text-white mb-4 tracking-tight font-[var(--font-display)]">
+                <h2 class="text-3xl font-bold text-white mb-4 tracking-tight font-(--font-display)">
                     ByCodeIt <span class="text-indigo-400">Solutions</span>
                 </h2>
                 <p class="text-gray-300/90 leading-relaxed max-w-sm">
@@ -938,10 +875,13 @@
                     <a href="https://wa.me/2349024986943" target="_blank"
                         class="text-gray-400 hover:text-green-500 transition transform hover:scale-110 hover:drop-shadow-[0_0_12px_#3b82f6]">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 32 32" fill="currentColor">
-                            <path
-                                d="M16 .5C7.44.5.5 7.44.5 16c0 2.8.73 5.53 2.12 7.94L1 31l7.28-1.91A15.5 15.5 0 0 0 16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5zm0 28a12.4 12.4 0 0 1-6.32-1.74l-.45-.27-4.32 1.13 1.15-4.2-.28-.44A12.4 12.4 0 0 1 3.6 16c0-6.84 5.56-12.4 12.4-12.4 3.31 0 6.42 1.29 8.76 3.63A12.4 12.4 0 0 1 28.4 16c0 6.84-5.56 12.4-12.4 12.4z" />
-                            <path
-                                d="M23.2 19.3c-.38-.19-2.24-1.1-2.59-1.23-.35-.13-.61-.19-.87.19-.26.38-1 1.23-1.22 1.48-.22.26-.45.29-.83.1-.38-.19-1.6-.59-3.05-1.87-1.13-1-1.9-2.23-2.12-2.61-.22-.38-.02-.58.17-.77.18-.18.38-.45.57-.67.19-.22.25-.38.38-.64.13-.26.06-.48-.03-.67-.1-.19-.87-2.1-1.19-2.88-.31-.75-.63-.65-.87-.66-.22-.01-.48-.02-.74-.02s-.68.1-1.04.48c-.35.38-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.19.26 2.76 4.23 6.7 5.93.94.41 1.67.65 2.24.83.94.3 1.8.26 2.48.16.76-.11 2.24-.91 2.56-1.78.32-.87.32-1.61.22-1.78-.1-.16-.35-.26-.74-.45z" />
+                            <path d="M16 .5C7.44.5.5 7.44.5 16c0 2.8.73 5.53 2.12 7.94L1 31l7.28-1.91A15.5 15.5 0 0 0 
+                                    16 31.5c8.56 0 15.5-6.94 15.5-15.5S24.56.5 16 .5zm0 28a12.4 12.4 0 0 1-6.32-1.74l-.45-.27-4.32 1.13 
+                                    1.15-4.2-.28-.44A12.4 12.4 0 0 1 3.6 16c0-6.84 5.56-12.4 12.4-12.4 3.31 0 6.42 1.29 8.76 3.63A12.4 
+                                    12.4 0 0 1 28.4 16c0 6.84-5.56 12.4-12.4 12.4z" />
+
+                            <path d="M23.2 19.3c-.38-.19-2.24-1.1-2.59-1.23-.35-.13-.61-.19-.87.19-.26.38-1 1.23-1.22 
+                                    1.48-.22.26-.45.29-.83.1-.38-.19-1.6-.59-3.05-1.87-1.13-1-1.9-2.23-2.12-2.61-.22-.38-.02-.58.17-.77.18-.18.38-.45.57-.67.19-.22.25-.38.38-.64.13-.26.06-.48-.03-.67-.1-.19-.87-2.1-1.19-2.88-.31-.75-.63-.65-.87-.66-.22-.01-.48-.02-.74-.02s-.68.1-1.04.48c-.35.38-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.19.26 2.76 4.23 6.7 5.93.94.41 1.67.65 2.24.83.94.3 1.8.26 2.48.16.76-.11 2.24-.91 2.56-1.78.32-.87.32-1.61.22-1.78-.1-.16-.35-.26-.74-.45z" />
                         </svg>
                     </a>
     
@@ -949,8 +889,8 @@
                     <a href="https://github.com/ByCodeIt" target="_blank"
                         class="text-gray-400 hover:text-white transition transform hover:scale-110 hover:drop-shadow-[0_0_12px_#ffffff]">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 2.1 3.6 1.5.1-.8.4-1.4.8-1.7-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z" />
+
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 2.1 3.6 1.5.1-.8.4-1.4.8-1.7-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z" />
                         </svg>
                     </a>
     
@@ -976,7 +916,7 @@
     
             <!-- Navigation -->
             <div>
-                <h3 class="text-white text-xl font-semibold mb-5 font-[var(--font-display)]">Explore</h3>
+                <h3 class="text-white text-xl font-semibold mb-5 font-(--font-display)">Explore</h3>
                 <ul class="space-y-3">
                     <li><a href="#about"
                             class="hover:text-indigo-400 hover:translate-x-1 transition-all duration-300 inline-block">About</a>
@@ -995,11 +935,11 @@
     
             <!-- Contact Section -->
             <div>
-                <h3 class="text-white text-xl font-semibold mb-5 font-[var(--font-display)]">Let’s Build Together</h3>
+                <h3 class="text-white text-xl font-semibold mb-5 font-(--font-display)">Let’s Build Together</h3>
                 <p class="text-gray-300/90 mb-6">Have a project idea or need expert frontend support? Let’s collaborate.</p>
     
                 <a href="mailto:contact@bycodeit.dev" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg 
-                    bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium 
+                    bg-linear-to-r from-blue-600 to-indigo-600 text-white font-medium 
                     hover:from-blue-500 hover:to-indigo-500 transition shadow-lg 
                     hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
@@ -1017,17 +957,45 @@
         <!-- Bottom Divider -->
         <div class="relative max-w-7xl mx-auto mt-20 border-t border-gray-800/80 pt-8 flex flex-col 
             md:flex-row items-center justify-between text-sm text-gray-500 text-center md:text-left gap-4">
-            <p>© 2025 ByCodeIt Solutions. All Rights Reserved.</p>
+            <p>© <span id="year"></span> ByCodeIt Solutions. All Rights Reserved.</p>
             <p>Designed & coded with ❤️ by <span class="text-indigo-400 font-medium">ByCodeIt</span></p>
         </div>
     </footer>
     <!-- End of Footer Section -->
 
+
+
+    <!-- Back to Top Button + Dynamic Glowing Scroll Progress Indicator -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <div class="relative">
+            <div id="progressGlow"
+                class="absolute inset-0 rounded-full blur-md opacity-0 pointer-events-none transition-all duration-500">
+            </div>
+    
+            <svg id="scrollProgress" width="44" height="44" viewBox="0 0 44 44" class="-rotate-90 relative z-10">
+                <circle cx="22" cy="22" r="20" stroke="rgba(255,255,255,0.15)" stroke-width="4" fill="none" />
+                <circle cx="22" cy="22" r="20" stroke="#3b82f6" stroke-width="4" fill="none" stroke-linecap="round"
+                    stroke-dasharray="125.6" stroke-dashoffset="125.6" class="transition-all duration-200 ease-linear" />
+            </svg>
+        </div>
+    
+        <button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="opacity-0 invisible translate-y-4 px-4 py-3 rounded-full shadow-lg 
+                                                                                            bg-linear-to-r from-blue-600 to-indigo-600 text-white font-medium 
+                                                                                            transition-all duration-500 ease-out 
+                                                                                            hover:scale-[1.08] hover:animate-pulse 
+                                                                                            hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] 
+                                                                                            focus:outline-none focus:ring-2 focus:ring-blue-400">
+            ↑
+        </button>
+    </div>
+    <!-- End of Back to Top Button + Dynamic Glowing Scroll Progress Indicator -->
+
+
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <!-- JAVASCRIPT FILE -->
-    <script src="./src/app.js"></script>
+    <script src="./src/app.js" defer></script>
 
 </body>
 </html>

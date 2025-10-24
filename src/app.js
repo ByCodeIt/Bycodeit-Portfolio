@@ -1,3 +1,127 @@
+// AOS Initialization
+AOS.init({
+    duration: 900,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 100,
+    mirror: false,
+    disableMutationObserver: true, // helps prevent layout reflows causing lag or double bars
+});
+// End of AOS Initialization
+
+
+
+// Navigation Effect and accessibility
+const menuToggle = document.querySelector('#menuToggle');
+const mobileMenu = document.querySelector('#mobileMenu');
+const menuBackdrop = document.querySelector('#menuBackdrop');
+const navbar = document.querySelector('#navbar');
+const navLinks = document.querySelectorAll('#navbarNav a');
+const indicator = document.querySelector('.nav-active-indicator');
+
+// Fade-in Navbar on load
+setTimeout(() => {
+    navbar.classList.remove('opacity-0', '-translate-y-5');
+    navbar.classList.add('opacity-100', 'translate-y-0');
+}, 250);
+
+// Active link indicator
+function updateIndicator(link) {
+    const rect = link.getBoundingClientRect();
+    const containerRect = link.parentElement.getBoundingClientRect();
+    indicator.style.width = `${rect.width}px`;
+    indicator.style.left = `${rect.left - containerRect.left}px`;
+}
+
+navLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => updateIndicator(link));
+    link.addEventListener('mouseleave', () => indicator.style.width = '0');
+    link.addEventListener('click', () => updateIndicator(link));
+});
+
+// Mobile Menu Controls
+window.openMenu = () => {
+    mobileMenu.classList.replace('-translate-x-full', 'translate-x-0');
+    menuBackdrop.classList.remove('hidden');
+    setTimeout(() => menuBackdrop.classList.add('opacity-100'), 10);
+    document.body.style.overflow = 'hidden';
+    menuToggle.setAttribute('aria-expanded', 'true');
+};
+
+window.closeMenu = () => {
+    mobileMenu.classList.replace('translate-x-0', '-translate-x-full');
+    menuBackdrop.classList.remove('opacity-100');
+    setTimeout(() => menuBackdrop.classList.add('hidden'), 400);
+    document.body.style.overflow = '';
+    menuToggle.setAttribute('aria-expanded', 'false');
+};
+
+// ScrollSpy
+const sections = document.querySelectorAll("section[id]");
+
+// --- Optimized Scroll Events ---
+let ticking = false;
+let counterStarted = false;
+
+function onScroll() {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            handleScroll();
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+function handleScroll() {
+    const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollY / docHeight;
+
+    // ✅ Navbar shadow toggle
+    navbar.classList.toggle("shadow-lg", scrollY > 20);
+
+    // ✅ ScrollSpy highlight
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach((link) => {
+                link.classList.remove("text-blue-400");
+                if (link.getAttribute("href") === `#${sectionId}`) {
+                    link.classList.add("text-blue-400");
+                }
+            });
+        }
+    });
+
+    // ✅ Counter animation trigger
+    const statsSection = document.getElementById("stats");
+    if (statsSection && !started && scrollY > statsSection.offsetTop - window.innerHeight + 100) {
+        animateCounters();
+        counterStarted = true;
+    }
+
+    // ✅ Progress ring + back to top (optional)
+    if (typeof updateProgress === "function") updateProgress(scrollPercent);
+}
+
+window.addEventListener("scroll", onScroll);
+
+document.documentElement.style.scrollBehavior = "smooth";
+// End of Navigation Effect and accessibility
+
+
+
+// Hero Section Animation on Load
+window.addEventListener('load', () => {
+    document.querySelector('#hero .z-10').classList.remove('opacity-0', 'translate-y-6');
+});
+// End of Hero Section Animation on Load
+
+
+
 // Project Counter
 const counters = document.querySelectorAll('.counter');
     const speed = 200; // lower = faster
@@ -35,96 +159,63 @@ window.addEventListener('scroll', () => {
 
 
 
+// Back to Top Button and Scroll Progress Indicator with Pulse Animation Script
+const backToTop = document.getElementById("backToTop");
+const scrollProgress = document.querySelector("#scrollProgress circle:nth-child(2)");
+const progressGlow = document.getElementById("progressGlow");
+let pulseTimeout;
 
-// Navigation Effects and Accessibility
-const menuToggle = document.querySelector('#menuToggle');
-const mobileMenu = document.querySelector('#mobileMenu');
-const menuBackdrop = document.querySelector('#menuBackdrop');
-const navbar = document.querySelector('#navbar');
-let scrollTimeout;
-
-// --- 1. Sticky Shadow Transition ---
 window.addEventListener("scroll", () => {
-    window.requestAnimationFrame(() => {
-        const scrolled = window.scrollY > 10;
-        navbar.classList.toggle("bg-[#0a0f2c]/95", scrolled);
-        navbar.classList.toggle("shadow-lg", scrolled);
-    });
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollTop / docHeight;
+
+    // Show/hide button
+    if (scrollTop > 300) {
+        backToTop.classList.remove("opacity-0", "invisible", "translate-y-4");
+        backToTop.classList.add("opacity-100", "visible", "translate-y-0");
+    } else {
+        backToTop.classList.remove("opacity-100", "visible", "translate-y-0");
+        backToTop.classList.add("opacity-0", "invisible", "translate-y-4");
+    }
+
+    // Scroll progress ring update
+    const dashArray = 125.6;
+    const dashOffset = dashArray * (1 - scrollPercent);
+    scrollProgress.style.strokeDashoffset = dashOffset;
+
+    // Blue → Indigo tone blend (no pinks)
+    const blue = { r: 59, g: 130, b: 246 }; // #3b82f6
+    const indigo = { r: 99, g: 102, b: 241 }; // #6366f1
+
+    const r = Math.round(blue.r + (indigo.r - blue.r) * scrollPercent);
+    const g = Math.round(blue.g + (indigo.g - blue.g) * scrollPercent);
+    const b = Math.round(blue.b + (indigo.b - blue.b) * scrollPercent);
+    const color = `rgb(${r}, ${g}, ${b})`;
+
+    // Apply color to circle and glow
+    scrollProgress.style.stroke = color;
+    progressGlow.style.background = `radial-gradient(circle, ${color}90, transparent)`;
+
+    // Sync button gradient (blue → indigo)
+    backToTop.style.background = `linear-gradient(to right, ${color}, rgba(${r - 10}, ${g - 10}, ${b - 5}, 1))`;
+
+    // Subtle pulse feedback
+    scrollProgress.classList.add("animate-[pulse_1s_ease-out]");
+    progressGlow.classList.add("opacity-100", "scale-105");
+
+    clearTimeout(pulseTimeout);
+    pulseTimeout = setTimeout(() => {
+        scrollProgress.classList.remove("animate-[pulse_1s_ease-out]");
+        progressGlow.classList.remove("opacity-100", "scale-105");
+    }, 400);
 });
-
-// --- Open / Close Menu ---
-function openMenu() {
-    mobileMenu.classList.replace('translate-x-full', 'translate-x-0');
-    menuBackdrop.classList.remove('hidden');
-    menuToggle.setAttribute('aria-expanded', 'true');
-
-    // Auto-focus first link
-    const firstLink = mobileMenu.querySelector("a");
-    if (firstLink) firstLink.focus();
-}
-
-function closeMenu() {
-    mobileMenu.classList.replace('translate-x-0', 'translate-x-full');
-    menuBackdrop.classList.add('hidden');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.focus();
-}
-
-// --- Close menu when clicking outside ---
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('#mobileMenu, #menuToggle')) closeMenu();
-});
-
-// --- ScrollSpy with ARIA current ---
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("#navbarNav a");
-
-function activateLink() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute("id");
-
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            navLinks.forEach((link) => {
-                link.classList.remove("text-blue-400", "after:w-full");
-                link.removeAttribute("aria-current");
-
-                if (link.getAttribute("href") === `#${sectionId}`) {
-                    link.classList.add("text-blue-400", "after:w-full");
-                    link.setAttribute("aria-current", "page");
-                }
-            });
-        }
-    });
-}
-
-// --- Debounced scroll activation ---
-window.addEventListener("scroll", () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(activateLink, 75);
-});
-
-// --- Smooth scroll globally ---
-document.documentElement.style.scrollBehavior = "smooth";
-// End of Navigation Effect and accessibility
+// End of Back to Top Button and Scroll Progress Indicator with Pulse Animation Script
 
 
-// Hero Section Animation on Load
-window.addEventListener('load', () => {
-    document.querySelector('#hero .z-10').classList.remove('opacity-0', 'translate-y-6');
-});
 
+// Dynamic Year
+// Auto-update year
+document.getElementById("year").textContent = new Date().getFullYear();
+// End of Dynamic Year
 
-// AOS Initialization
-AOS.init({
-    duration: 900,
-    easing: 'ease-out-cubic',
-    once: true,
-    offset: 100,
-    mirror: false,
-    disableMutationObserver: true, // helps prevent layout reflows causing lag or double bars
-});
-// End of AOS Initialization

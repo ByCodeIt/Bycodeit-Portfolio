@@ -1,3 +1,46 @@
 /* * {
     border: 1px solid red;
 } */
+
+.nav-active-indicator {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(to right, #3b82f6, #6366f1);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #60a5fa;
+}
+
+/* Mobile Slide Animation */
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%) scale(0.98);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.mobile-menu-open {
+    animation: slide-in 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Glow on Scroll */
+#navbar.scrolled {
+    box-shadow: 0 4px 25px rgba(59, 130, 246, 0.25);
+    background: rgba(10, 15, 44, 0.95);
+}
