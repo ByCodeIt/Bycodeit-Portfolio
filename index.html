@@ -628,7 +628,7 @@
                 <div class="grid md:grid-cols-3 gap-8">
         
                     <!-- Testimonial 1 -->
-                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between data-aos="fade-up">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between" data-aos="fade-up">
 
                         <p class="text-white/90 italic mb-6">
                             "ByCodeIt transformed our online presence with a sleek, responsive site. Our engagement doubled
@@ -648,7 +648,7 @@
                     </div>
         
                     <!-- Testimonial 2 -->
-                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between data-aos="fade-up">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between" data-aos="fade-up">
 
                         <p class="text-white/90 italic mb-6">
                             "His attention to detail and design sense is unmatched. The project exceeded our expectations."
@@ -667,7 +667,7 @@
                     </div>
         
                     <!-- Testimonial 3 -->
-                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between" data-aos="fade-up">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 flex flex-col justify-between " data-aos="fade-up">
 
                         <p class="text-white/90 italic mb-6">
                             "Working with ByCodeIt was seamless. He delivered on time and brought fresh ideas to the table."
@@ -755,8 +755,7 @@
                                     <input type="text" id="name" name="name" required placeholder="Full name" 
                                             class="w-full rounded-lg border border-white/20 bg-white/10 
                                             focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 
-                                            text-white placeholder-gray-300 transition duration-300 outline-none 
-                                            hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
+                                            text-white placeholder-gray-300 outline-none" />
                                 </div>
         
                                 <!-- Email -->
@@ -767,8 +766,7 @@
                                     <input type="email" id="email" name="email" required placeholder="Email address" 
                                             class="w-full rounded-lg border border-white/20 bg-white/10 
                                             focus:border-blue-400 focus:ring-2 focus:ring-blue-400/40 p-3 
-                                            text-white placeholder-gray-300 transition duration-300 outline-none 
-                                            hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
+                                            text-white placeholder-gray-300 outline-none" />
                                 </div>
                             </div>
         
@@ -780,8 +778,7 @@
                                 <textarea id="message" name="message" rows="3" required
                                     placeholder="Share your idea or request…" class="w-full rounded-lg border border-white/20 
                                             bg-white/10 focus:border-blue-400 focus:ring-2 
-                                            focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 transition duration-300 
-                                            outline-none hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                                            focus:ring-blue-400/40 p-3 text-white placeholder-gray-300 outline-none" />
                                 </textarea>
                             </div>
         
@@ -796,8 +793,7 @@
                     <!-- Contact Info Card -->
                     <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000" 
                                         class="bg-white/10 backdrop-blur-md shadow-lg border 
-                                            border-white/20 rounded-2xl p-10 flex flex-col items-center 
-                                            text-center hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+                                            border-white/20 rounded-2xl p-10 flex flex-col items-center text-center">
         
                         <h5 class="text-xl font-semibold mb-3">Prefer Direct Contact?</h5>
                         <p class="text-white/80 mb-6 max-w-md">
@@ -861,9 +857,22 @@
     
             <!-- Brand Section -->
             <div>
-                <h2 class="text-3xl font-bold text-white mb-4 tracking-tight font-(--font-display)">
-                    ByCodeIt <span class="text-indigo-400">Solutions</span>
-                </h2>
+
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 sm:gap-3 pr-2 sm:pr-4 group 
+                                            focus-visible:ring-2 focus-visible:ring-blue-400
+                                            focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0f2c] rounded-lg transition">
+                
+                    <img src="./assets/logo-img/ByCodeIt.png" alt="ByCodeIt Logo" class="h-7 w-auto mb-4 sm:h-8 lg:h-9 
+                                                                                        group-hover:scale-105 transition-transform duration-300" />
+
+                    <h2 class="text-3xl sm:text-3xl font-bold text-white mb-4 tracking-tight font-(--font-display) 
+                                whitespace-nowrap transition-colors duration-300 group-hover:text-blue-300">
+
+                        ByCodeIt <span class="text-blue-400 group-hover:text-blue-300">Solutions</span>
+                    </h2>
+                </a>
+
                 <p class="text-gray-300/90 leading-relaxed max-w-sm">
                     We code your vision — transforming ideas into beautiful, scalable digital experiences for modern brands.
                 </p>
@@ -950,7 +959,7 @@
                     contact@bycodeit.dev
                 </a>
     
-                <p class="text-gray-500 mt-4 text-sm">Based in Ogun, Nigeria · Available Mon–Sat</p>
+                <p class="text-gray-500 mt-4 text-sm">Based in Lagos || Ogun, Nigeria · Available Mon–Sat</p>
             </div>
         </div>
     
