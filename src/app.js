@@ -10,7 +10,6 @@ AOS.init({
 // End of AOS Initialization
 
 
-
 // Navigation Effect and accessibility
 const menuToggle = document.querySelector('#menuToggle');
 const mobileMenu = document.querySelector('#mobileMenu');
@@ -113,13 +112,11 @@ document.documentElement.style.scrollBehavior = "smooth";
 // End of Navigation Effect and accessibility
 
 
-
 // Hero Section Animation on Load
 window.addEventListener('load', () => {
     document.querySelector('#hero .z-10').classList.remove('opacity-0', 'translate-y-6');
 });
 // End of Hero Section Animation on Load
-
 
 
 // Project Counter
@@ -156,7 +153,6 @@ window.addEventListener('scroll', () => {
     }
 });
 // End of Project Counter
-
 
 
 // Back to Top Button and Scroll Progress Indicator with Pulse Animation Script
@@ -213,9 +209,37 @@ window.addEventListener("scroll", () => {
 // End of Back to Top Button and Scroll Progress Indicator with Pulse Animation Script
 
 
+// Small JS to make Enter / Space toggle expand for keyboard users(no framework required)
+// Toggle 'group-expanded' class on button when toggled via keyboard (Enter/Space)
+document.querySelectorAll('#services button[type="button"]').forEach(btn => {
+    btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            btn.classList.toggle('group-expanded');
+        }
+    });
+    // Also ensure focus shows expanded state (optional)
+    btn.addEventListener('focus', () => btn.classList.add('group-focused'));
+    btn.addEventListener('blur', () => {
+        btn.classList.remove('group-focused');
+        // don't auto-collapse after focus out (keeps hover behaviour natural)
+    });
+});
+// End of Expand Toggle Accessibility
 
-// Dynamic Year
+
+// Make sure service buttons are keyboard-accessible and announce press
+document.querySelectorAll('#services .service-item').forEach(btn => {
+        btn.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                btn.classList.toggle('active');
+            }
+        });
+});
+// End of Service Buttons Accessibility
+
+
 // Auto-update year
 document.getElementById("year").textContent = new Date().getFullYear();
 // End of Dynamic Year
-
