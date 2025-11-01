@@ -62,6 +62,33 @@
     <link rel="preload" as="image" href="./assets/logo-img/ByCodeIt.png" />
     <link rel="preload" as="image" href="./assets/background-img/background5.jpg">
 
+    <!-- Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFMLEM8E76"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JFMLEM8E76');
+    </script> -->
+
+    <!-- Google tag (gtag.js) - Privacy Safe -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFMLEM8E76"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        // ✅ Replace with your own Measurement ID
+        gtag('config', 'G-JFMLEM8E76', {
+            anonymize_ip: true,          // Hides users’ IP addresses
+            allow_google_signals: false, // Disables advanced tracking like ad personalization
+            allow_ad_personalization_signals: false,
+            send_page_view: true         // Automatically tracks page views
+        });
+    </script>
+
+
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -771,6 +798,41 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <!-- Project 3 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center group">
+                        <div class="relative">
+                            <!-- Project Number -->
+                            <div class="text-4xl font-extrabold mb-2 bg-linear-to-r from-blue-400 via-indigo-400 to-purple-500 
+                                                            bg-clip-text text-transparent drop-shadow-md">
+                                03
+                            </div>
+                    
+                            <h3 class="text-2xl font-semibold mb-4">My Blog Website</h3>
+                            <p class="text-white/80 leading-relaxed mb-4">
+                                My Blog is a modern, responsive blogging platform designed for simplicity and creativity. It features a clean interface,
+                                dark mode, live post editing, search functionality, and smooth user experience.
+                            </p>
+                            <!-- Tools/Frameworks -->
+                            <ul class="flex flex-wrap gap-4 text-sm text-white/70 font-(--font-body) mb-4">
+                                <li class="bg-white/10 px-3 py-1 rounded-full">HTML</li>
+                                <li class="bg-white/10 px-3 py-1 rounded-full">Tailwind CSS</li>
+                                <li class="bg-white/10 px-3 py-1 rounded-full">JavaScript</li>
+                            </ul>
+                            <a href="https://myblo.netlify.app/" target="_blank"
+                                class="inline-block text-sm font-medium tracking-wide">
+                                View Project →
+                            </a>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="overflow-hidden rounded-2xl bg-white/5 border border-white/10 group-hover:border-white/20 transition-all duration-500">
+                                <img src="./assets/portfolio-img/myblog2.png" alt="My Blog Website"
+                                    class="w-full h-[340px] object-cover rounded-2xl group-hover:scale-[1.06] transition-transform duration-700" />
+                            </div>
+                        </div>
+                    </div>
         
                 </div>
         
@@ -913,7 +975,6 @@
             </div>
         </section>
         <!-- End of Testimonials Section -->
-        
 
 
         <!-- Project Counter -->
@@ -1200,6 +1261,50 @@
         </button>
     </div>
     <!-- End of Back to Top Button + Dynamic Glowing Scroll Progress Indicator -->
+
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden 
+                bg-white/90 dark:bg-gray-800/90 backdrop-blur 
+                border border-gray-200 dark:border-gray-700 
+                rounded-xl shadow-lg px-6 py-4 text-sm flex flex-col md:flex-row 
+                items-center md:space-x-3 max-w-md w-[90%] 
+                opacity-0 translate-y-5 transition-all duration-500 ease-out">
+    
+        <p class="text-gray-700 dark:text-gray-300 text-center md:text-left">
+            🍪 We use anonymous cookies to analyze traffic and improve your experience.
+        </p>
+    
+        <button id="accept-cookies" class="mt-3 md:mt-0 w-full md:w-auto px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 
+                                            transition duration-300">
+                Got it
+        </button>
+    </div>
+    <!-- End of Cookie Consent Banner -->
+
+
+    <!-- Cookie Consent Banner Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const banner = document.getElementById("cookie-banner");
+            const acceptBtn = document.getElementById("accept-cookies");
+
+            // Show banner only if not already accepted
+            if (!localStorage.getItem("cookiesAccepted")) {
+                banner.classList.remove("hidden");
+                setTimeout(() => {
+                    banner.classList.remove("opacity-0", "translate-y-5");
+                }, 100); // slight delay for smooth fade-in
+            }
+
+            // When accepted
+            acceptBtn.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "true");
+                banner.classList.add("opacity-0", "translate-y-5");
+                setTimeout(() => banner.classList.add("hidden"), 400);
+            });
+        });
+    </script>
 
 
     <!-- AOS Animation JS -->
